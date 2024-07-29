@@ -1,4 +1,4 @@
-const { ref, reactive, onMounted, createApp } = Vue;
+const { ref, computed, reactive, onMounted, createApp } = Vue;
 
 const DataDashboard = {
   template: `
@@ -49,13 +49,38 @@ const DataDashboard = {
     `,
   setup() {
     const csvData = ref([]);
-    const filteredData = ref([]);
-    const measures = ref([]);
     const selectedMeasure = ref("");
-    const categories = ref([]);
     const selectedCategory = ref("");
     const headers = ref([]);
     const table = ref(null);
+
+    const filteredData = computed(() => {
+      return csvData.value.filter(
+        (row) =>
+          row.measure === selectedMeasure.value &&
+          row.stratification_category === selectedCategory.value
+      );
+    });
+
+    const measures = computed(() => {
+      const measureSet = new Set();
+      csvData.value.filter(row => {
+        if (row.measure) {
+          measureSet.add(row.measure);
+        }
+      });
+      return Array.from(measureSet);
+    });
+
+    const categories = computed(() => {
+      const categorySet = new Set();
+      csvData.value.forEach((row) => {
+        if (row.stratification_category) {
+          categorySet.add(row.stratification_category);
+        }
+      });
+      return Array.from(categorySet);
+    });
 
     const fetchCSVData = () => {
       fetch("http://localhost:8000/data.csv")
@@ -77,33 +102,10 @@ const DataDashboard = {
     const initialize = (results) => {
       csvData.value = results.data;
       headers.value = Object.keys(csvData.value[0]);
-      const measureSet = new Set();
-      csvData.value.forEach((row) => {
-        if (row.measure) {
-          measureSet.add(row.measure);
-        }
-      });
-      measures.value = Array.from(measureSet);
       selectedMeasure.value = measures.value[0];
-      const categorySet = new Set();
-      csvData.value.forEach((row) => {
-        if (row.stratification_category) {
-          categorySet.add(row.stratification_category);
-        }
-      });
-      categories.value = Array.from(categorySet);
       selectedCategory.value = categories.value[0];
 
-      filterTable();
       generateTable();
-    };
-
-    const filterTable = () => {
-      filteredData.value = csvData.value.filter(
-        (row) =>
-          row.measure === selectedMeasure.value &&
-          row.stratification_category === selectedCategory.value
-      );
     };
 
     const generateTable = () => {
@@ -118,7 +120,6 @@ const DataDashboard = {
     };
 
     const updateTable = () => {
-      filterTable();
       // const table = $('#table').DataTable();
       // table.clear();
       // filteredData.value.forEach(row => {
