@@ -1,7 +1,7 @@
-const { ref, reactive, onMounted, createApp } = Vue
+const { ref, reactive, onMounted, createApp } = Vue;
 
 const DataDashboard = {
-    template: `
+  template: `
 	<div>
         <div class="form-group">
             <label for="measureSelect" class="form-label required-field">Choose a Measure</label>
@@ -47,106 +47,110 @@ const DataDashboard = {
         </div>
 	</div>
     `,
-    setup() {
-        const csvData = ref([])
-		const filteredData = ref ([])
-		const measures = ref([])
-		const selectedMeasure = ref('')
-        const categories = ref([])
-        const selectedCategory = ref('')
-		const headers = ref([])
-        const table = ref(null)
-        
-        const fetchCSVData = () => {
-            fetch('http://localhost:8000/data.csv')
-                .then(response => response.text())
-                .then(csvText => {
-                    Papa.parse(csvText, {
-                        header: true,
-                        dynamicTyping: true,
-                        complete: results => {
-							initialize(results);
-                        }
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching the CSV file:', error);
-                });
-        }
+  setup() {
+    const csvData = ref([]);
+    const filteredData = ref([]);
+    const measures = ref([]);
+    const selectedMeasure = ref("");
+    const categories = ref([]);
+    const selectedCategory = ref("");
+    const headers = ref([]);
+    const table = ref(null);
 
-		const initialize = (results) => {
-            csvData.value = results.data
-            headers.value = Object.keys(csvData.value[0])
-            const measureSet = new Set()
-            csvData.value.forEach(row => {
-                if (row.measure) {
-                    measureSet.add(row.measure);
-                }
-            })
-            measures.value = Array.from(measureSet)
-            selectedMeasure.value = measures.value[0]
-			const categorySet = new Set()
-            csvData.value.forEach(row => {
-                if (row.stratification_category) {
-                    categorySet.add(row.stratification_category)
-                }
-            })
-            categories.value = Array.from(categorySet)
-            selectedCategory.value = categories.value[0]
-
-            filterTable()
-            generateTable()
-		}
-
-        const filterTable = () => {
-            filteredData.value = csvData.value.filter(row => row.measure === selectedMeasure.value && row.stratification_category === selectedCategory.value)
-        }
-
-        const generateTable = () => {
-            // TODO: DataTables seems to work but throws errors in the console
-            // if ($.fn.DataTable.isDataTable('#table')) {
-            //     $('#table').DataTable().destroy();
-            // }
-            // $('#table').DataTable({
-            //     data: filteredData.value.map(row => Object.values(row)),
-            //     columns: headers.value.map(header => ({ title: header }))
-            // });
-        }
-
-		const updateTable = () => {
-            filterTable()
-            // const table = $('#table').DataTable();
-            // table.clear();
-            // filteredData.value.forEach(row => {
-            //     table.row.add(Object.values(row));
-            // });
-            // table.draw();
-        }
-
-        const applyClass = (row) => {
-            return row['p_value_numeric'] < 0.05 ? "significant":""
-        }
-
-        onMounted(() => {
-            fetchCSVData()
+    const fetchCSVData = () => {
+      fetch("http://localhost:8000/data.csv")
+        .then((response) => response.text())
+        .then((csvText) => {
+          Papa.parse(csvText, {
+            header: true,
+            dynamicTyping: true,
+            complete: (results) => {
+              initialize(results);
+            },
+          });
         })
+        .catch((error) => {
+          console.error("Error fetching the CSV file:", error);
+        });
+    };
 
-        return {
-            filteredData,
-            measures,
-            selectedMeasure,
-            categories,
-            selectedCategory,
-            headers,
-            table,
-            updateTable,
-            applyClass
+    const initialize = (results) => {
+      csvData.value = results.data;
+      headers.value = Object.keys(csvData.value[0]);
+      const measureSet = new Set();
+      csvData.value.forEach((row) => {
+        if (row.measure) {
+          measureSet.add(row.measure);
         }
-    }
-}
+      });
+      measures.value = Array.from(measureSet);
+      selectedMeasure.value = measures.value[0];
+      const categorySet = new Set();
+      csvData.value.forEach((row) => {
+        if (row.stratification_category) {
+          categorySet.add(row.stratification_category);
+        }
+      });
+      categories.value = Array.from(categorySet);
+      selectedCategory.value = categories.value[0];
+
+      filterTable();
+      generateTable();
+    };
+
+    const filterTable = () => {
+      filteredData.value = csvData.value.filter(
+        (row) =>
+          row.measure === selectedMeasure.value &&
+          row.stratification_category === selectedCategory.value
+      );
+    };
+
+    const generateTable = () => {
+      // TODO: DataTables seems to work but throws errors in the console
+      // if ($.fn.DataTable.isDataTable('#table')) {
+      //     $('#table').DataTable().destroy();
+      // }
+      // $('#table').DataTable({
+      //     data: filteredData.value.map(row => Object.values(row)),
+      //     columns: headers.value.map(header => ({ title: header }))
+      // });
+    };
+
+    const updateTable = () => {
+      filterTable();
+      // const table = $('#table').DataTable();
+      // table.clear();
+      // filteredData.value.forEach(row => {
+      //     table.row.add(Object.values(row));
+      // });
+      // table.draw();
+    };
+
+    const applyClass = (row) => {
+      return row["p_value_numeric"] < 0.05 ? "significant" : "";
+    };
+
+    onMounted(() => {
+      fetchCSVData();
+    });
+
+    return {
+      filteredData,
+      measures,
+      selectedMeasure,
+      categories,
+      selectedCategory,
+      headers,
+      table,
+      updateTable,
+      applyClass,
+    };
+  },
+};
 
 createApp({
-    components: {
-        'data-dashboard': DataDashboard
-    }
-}).mount('#app')
+  components: {
+    "data-dashboard": DataDashboard,
+  },
+}).mount("#app");
