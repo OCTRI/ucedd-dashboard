@@ -33,16 +33,6 @@ const DataDashboard = {
         </div>
         <div id="tableContainer" class="mt-4">
             <table id="table" class="table-bordered" ref="table">
-                <thead>
-                    <tr>
-                        <th v-for="header in headers" :key="header">{{ header }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="row in filteredData" :key="row.id" :class="applyClass(row)" >
-                        <td v-for="header in headers" :key="header">{{ row[header] }}</td>
-                    </tr>
-                </tbody>
             </table>
         </div>
 	</div>
@@ -64,7 +54,7 @@ const DataDashboard = {
 
     const measures = computed(() => {
       const measureSet = new Set();
-      csvData.value.filter(row => {
+      csvData.value.filter((row) => {
         if (row.measure) {
           measureSet.add(row.measure);
         }
@@ -109,27 +99,28 @@ const DataDashboard = {
     };
 
     const generateTable = () => {
-      // TODO: DataTables seems to work but throws errors in the console
-      // if ($.fn.DataTable.isDataTable('#table')) {
-      //     $('#table').DataTable().destroy();
-      // }
-      // $('#table').DataTable({
-      //     data: filteredData.value.map(row => Object.values(row)),
-      //     columns: headers.value.map(header => ({ title: header }))
-      // });
+      if ($.fn.DataTable.isDataTable("#table")) {
+        $("#table").DataTable().destroy();
+      }
+      $("#table").DataTable({
+        data: filteredData.value.map((row) => Object.values(row)),
+        columns: headers.value.map((header) => ({ title: header })),
+        rowCallback: function (row, data) {
+          // TODO: Can we make the index dynamic based on the header?
+          if (data[10] < 0.05) {
+            $(row).addClass('significant');
+          }
+        },
+      });
     };
 
     const updateTable = () => {
-      // const table = $('#table').DataTable();
-      // table.clear();
-      // filteredData.value.forEach(row => {
-      //     table.row.add(Object.values(row));
-      // });
-      // table.draw();
-    };
-
-    const applyClass = (row) => {
-      return row["p_value_numeric"] < 0.05 ? "significant" : "";
+      const table = $("#table").DataTable();
+      table.clear();
+      filteredData.value.forEach((row) => {
+        table.row.add(Object.values(row));
+      });
+      table.draw();
     };
 
     onMounted(() => {
@@ -144,8 +135,7 @@ const DataDashboard = {
       selectedCategory,
       headers,
       table,
-      updateTable,
-      applyClass,
+      updateTable
     };
   },
 };
