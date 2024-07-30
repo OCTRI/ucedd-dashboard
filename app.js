@@ -42,7 +42,6 @@ const DataDashboard = {
     const selectedMeasure = ref("");
     const selectedCategory = ref("");
     const headers = ref([]);
-    const table = ref(null);
 
     const filteredData = computed(() => {
       return csvData.value.filter(
@@ -152,7 +151,6 @@ const DataDashboard = {
       categories,
       selectedCategory,
       headers,
-      table,
       updateTable
     };
   },
