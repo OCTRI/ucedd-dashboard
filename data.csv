@@ -1,0 +1,227 @@
+measure,denominator_definition,stratification,total_n,idd_estimate,idd_error,non_idd_estimate,non_idd_error,difference_in_estimates,p_value,p_value_numeric,stratification_category
+30-Day All-Cause Readmissions,Recipients aged 18-29 years with a hospital stay,Ages 18-29,177,576.6,(2028.2),100.0,(378.9),476.6,0.010,0.01,Age
+30-Day All-Cause Readmissions,Recipients aged 30-39 years with a hospital stay,Ages 30-39,90,677.4,(1677.0),142.9,(524.5),534.6,0.025,0.025,Age
+30-Day All-Cause Readmissions,Recipients aged 40-49 years with a hospital stay,Ages 40-49,53,571.4,(1768.9),636.4,(1433.4),-64.9,0.900,0.9,Age
+30-Day All-Cause Readmissions,Recipients aged 50-64 years with a hospital stay,Ages 50-64,81,311.1,(900.1),222.2,(831.9),88.9,0.646,0.646,Age
+30-Day All-Cause Readmissions,Recipients aged 18-64 years with a hospital stay,All,401,555.9,(1775.7),200.0,(727.9),355.9,0.005,0.005,All
+30-Day All-Cause Readmissions,Black/African American recipients aged 18-64 years,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions,Female recipients aged 18-64 years with a hospital stay,Female,188,570.4,(2084.7),130.4,(653.5),440,0.029,0.029,Sex
+30-Day All-Cause Readmissions,Latino/a/x recipients aged 18-64 years with a hospital stay,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions,Males aged 18-64 years with a hospital stay,Male,213,541.7,(1413.6),246.4,(774.7),295.3,0.051,0.051,Sex
+30-Day All-Cause Readmissions,Other/Multiple Race recipients aged 18-64 years with a hospital stay,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions,Rural recipients aged 18-64 years with a hospital stay,Rural,61,250.0,(808.6),190.5,(872.9),59.5,0.797,0.797,Residency
+30-Day All-Cause Readmissions,Unknown/Missing/Decline Race recipients aged 18-64 years with a hospital stay,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions,Urban recipients aged 18-64 years with a hospital stay,Urban,340,605.7,(1883.1),202.1,(696.8),403.6,0.004,0.004,Residency
+30-Day All-Cause Readmissions,White recipients aged 18-64 years with a hospital stay,White,243,542.9,(1653.0),205.9,(744.3),337,0.030,0.03,Race
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Recipients aged 18-29 years with hospital stay for mental illness,Ages 18-29,65,388.9,(1122.9),272.7,(467.1),116.2,0.579,0.579,Age
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Recipients aged 30-39 years with hospital stay for mental illness,Ages 30-39,NA,NA,NA,NA,NA,NA,NA,NA,Age
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Recipients aged 18-64 years with hospital stay for mental illness,All,118,564.4,(1564.7),294.1,(587.9),270.2,0.205,0.205,All
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Black/African American recipients aged 18-64 years with hospital stay for mental illness,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Female recipients aged 18-64 years with hospital stay for mental illness,Female,61,690.9,(1824.5),166.7,(408.2),524.2,0.086,0.086,Sex
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Males aged 18-64 years with hospital stay for mental illness,Male,57,413.0,(1184.6),363.6,(674.2),49.4,0.855,0.855,Sex
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Other/Multiple Race recipients aged 18-64 years with hospital stay for mental illness,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Rural recipients aged 18-64 years with hospital stay for mental illness,Rural,NA,NA,NA,NA,NA,NA,NA,NA,Residency
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Unknown/Missing/Decline Race recipients aged 18-64 years with hospital stay for mental illness,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,Urban recipients aged 18-64 years with hospital stay for mental illness,Urban,106,560.4,(1600.1),333.3,(617.2),227.1,0.331,0.331,Residency
+30-Day All-Cause Readmissions After Hospitalization for Mental Illness,White recipients aged 18-64 years with hospital stay for mental illness,White,65,736.8,(1932.1),250.0,(462.9),486.8,0.116,0.116,Race
+Access to Any Dental Care,Recipients aged 18-29 years,Ages 18-29,2192,58.4,NA,33,NA,25.4,<0.001,0.001,Age
+Access to Any Dental Care,Recipients aged 30-39 years,Ages 30-39,1010,62,NA,33.5,NA,28.5,<0.001,0.001,Age
+Access to Any Dental Care,Recipients aged 40-49 years,Ages 40-49,468,63.7,NA,30.8,NA,32.9,<0.001,0.001,Age
+Access to Any Dental Care,Recipients aged 50-64 years,Ages 50-64,462,52.8,NA,28.6,NA,24.2,<0.001,0.001,Age
+Access to Any Dental Care,Recipients aged 18-64 years,All,4132,59.2,NA,32.4,NA,26.8,<0.001,0.001,All
+Access to Any Dental Care,Black/African American recipients aged 18-64 years,Black/African American,224,65.2,NA,39.3,NA,25.9,<0.001,0.001,Race
+Access to Any Dental Care,Female recipients aged 18-64 years,Female,1888,58.8,NA,38.9,NA,19.9,<0.001,0.001,Sex
+Access to Any Dental Care,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,59.7,NA,35.1,NA,24.6,<0.001,0.001,Race
+Access to Any Dental Care,Males aged 18-64 years,Male,2244,59.6,NA,26.9,NA,32.7,<0.001,0.001,Sex
+Access to Any Dental Care,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,56.9,NA,39.7,NA,17.2,<0.001,0.001,Race
+Access to Any Dental Care,Rural recipients aged 18-64 years,Rural,880,63.2,NA,33.6,NA,29.6,<0.001,0.001,Residency
+Access to Any Dental Care,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,57.2,NA,29,NA,28.2,<0.001,0.001,Race
+Access to Any Dental Care,Urban recipients aged 18-64 years,Urban,3252,58.2,NA,32,NA,26.2,<0.001,0.001,Residency
+Access to Any Dental Care,White recipients aged 18-64 years,White,2396,59.5,NA,30.6,NA,28.9,<0.001,0.001,Race
+Antidepressant Medication Management - Acute Phase Treatment,Recipients aged 18-29 years with diagnosis of major depression and treatment with antidepressant,Ages 18-29,107,50.8,NA,41.7,NA,9.1,0.452,0.452,Age
+Antidepressant Medication Management - Acute Phase Treatment,Recipients aged 30-39 years with diagnosis of major depression and treatment with antidepressant,Ages 30-39,57,60,NA,40.7,NA,19.3,0.235,0.235,Age
+Antidepressant Medication Management - Acute Phase Treatment,Recipients aged 40-49 years with diagnosis of major depression and treatment with antidepressant,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Antidepressant Medication Management - Acute Phase Treatment,Recipients aged 50-64 years with diagnosis of major depression and treatment with antidepressant,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Antidepressant Medication Management - Acute Phase Treatment,Recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,All,219,55.1,NA,41.3,NA,13.8,0.060,0.06,All
+Antidepressant Medication Management - Acute Phase Treatment,Black/African American recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Acute Phase Treatment,Female recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Female,121,48.6,NA,33.3,NA,15.3,0.136,0.136,Sex
+Antidepressant Medication Management - Acute Phase Treatment,Latino/a/x recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Acute Phase Treatment,Males aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Male,98,63.2,NA,51.2,NA,12,0.330,0.33,Sex
+Antidepressant Medication Management - Acute Phase Treatment,Other/Multiple Race recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Acute Phase Treatment,Rural recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Rural,NA,NA,NA,NA,NA,NA,NA,NA,Residency
+Antidepressant Medication Management - Acute Phase Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Acute Phase Treatment,Urban recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Urban,169,59.8,NA,40.3,NA,19.5,0.019,0.019,Residency
+Antidepressant Medication Management - Acute Phase Treatment,White recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,White,133,57.9,NA,50.9,NA,7,0.529,0.529,Race
+Antidepressant Medication Management - Continuous Phase Treatment,Recipients aged 18-29 years with diagnosis of major depression and treatment with antidepressant,Ages 18-29,107,28.8,NA,18.8,NA,10,0.327,0.327,Age
+Antidepressant Medication Management - Continuous Phase Treatment,Recipients aged 30-39 years with diagnosis of major depression and treatment with antidepressant,Ages 30-39,57,33.3,NA,18.5,NA,14.8,0.334,0.334,Age
+Antidepressant Medication Management - Continuous Phase Treatment,Recipients aged 40-49 years with diagnosis of major depression and treatment with antidepressant,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Antidepressant Medication Management - Continuous Phase Treatment,Recipients aged 50-64 years with diagnosis of major depression and treatment with antidepressant,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Antidepressant Medication Management - Continuous Phase Treatment,Recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,All,219,33.9,NA,21.7,NA,12.2,0.071,0.071,All
+Antidepressant Medication Management - Continuous Phase Treatment,Black/African American recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Continuous Phase Treatment,Female recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Female,121,28.6,NA,17.6,NA,11,0.240,0.24,Sex
+Antidepressant Medication Management - Continuous Phase Treatment,Latino/a/x recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Continuous Phase Treatment,Males aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Male,98,40.4,NA,26.8,NA,13.6,0.241,0.241,Sex
+Antidepressant Medication Management - Continuous Phase Treatment,Other/Multiple Race recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Continuous Phase Treatment,Rural recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Rural,NA,NA,NA,NA,NA,NA,NA,NA,Residency
+Antidepressant Medication Management - Continuous Phase Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Antidepressant Medication Management - Continuous Phase Treatment,Urban recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,Urban,169,36.1,NA,20.8,NA,15.3,0.048,0.048,Residency
+Antidepressant Medication Management - Continuous Phase Treatment,White recipients aged 18-64 years with diagnosis of major depression and treatment with antidepressant,White,133,39.5,NA,28.1,NA,11.4,0.236,0.236,Race
+Avoidance of Non-Recommended Cervical Cancer Screenings,Female recipients aged 18-20 years,Ages 18-29,226,100,NA,97.6,NA,2.4,0.407,0.407,Age
+Avoidance of Non-Recommended Cervical Cancer Screenings,Female recipients aged 18-20 years,All,226,100,NA,97.6,NA,2.4,0.407,0.407,All
+Avoidance of Non-Recommended Cervical Cancer Screenings,Black/African American female recipients aged 18-20 years,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Avoidance of Non-Recommended Cervical Cancer Screenings,Female recipients aged 18-20 years,Female,226,100,NA,97.6,NA,2.4,0.407,0.407,Sex
+Avoidance of Non-Recommended Cervical Cancer Screenings,Latino/a/x female recipients aged 18-20 years,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Avoidance of Non-Recommended Cervical Cancer Screenings,Other/Multiple Race female recipients aged 18-20 years,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Avoidance of Non-Recommended Cervical Cancer Screenings,Rural female recipients aged 18-20 years,Rural,NA,NA,NA,NA,NA,NA,NA,NA,Residency
+Avoidance of Non-Recommended Cervical Cancer Screenings,Unknown/Missing/Decline Race female recipients aged 18-20 years,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Avoidance of Non-Recommended Cervical Cancer Screenings,Urban female recipients aged 18-20 years,Urban,177,100,NA,97.1,NA,2.9,0.433,0.433,Residency
+Avoidance of Non-Recommended Cervical Cancer Screenings,White female recipients aged 18-20 years,White,88,100,NA,94.1,NA,5.9,0.434,0.434,Race
+Breast Cancer Screening,Female recipients aged 50-64 years,Ages 50-64,175,42.1,NA,36.2,NA,5.9,0.526,0.526,Age
+Breast Cancer Screening,Female recipients aged 50-64 years,All,175,42.1,NA,36.2,NA,5.9,0.526,0.526,All
+Breast Cancer Screening,Black/African American female recipients aged 50-64 years,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Breast Cancer Screening,Female recipients aged 50-64 years,Female,175,42.1,NA,36.2,NA,5.9,0.526,0.526,Sex
+Breast Cancer Screening,Latino/a/x female recipients aged 50-64 years,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Breast Cancer Screening,Other/Multiple Race female recipients aged 50-64 years,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Breast Cancer Screening,Rural female recipients aged 50-64 years,Rural,NA,NA,NA,NA,NA,NA,NA,NA,Residency
+Breast Cancer Screening,Unknown/Missing/Decline Race female recipients aged 50-64 years,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Breast Cancer Screening,Urban female recipients aged 50-64 years,Urban,145,36.2,NA,36.9,NA,-0.7,1.000,1,Residency
+Breast Cancer Screening,White female recipients aged 50-64 years,White,127,45.8,NA,41.8,NA,4,0.786,0.786,Race
+Cervical Cancer Screening-incidence,Female recipients aged 21-29 years,Ages 18-29,769,20.9,NA,28.7,NA,-7.8,0.018,0.018,Age
+Cervical Cancer Screening-incidence,Female recipients aged 30-39 years,Ages 30-39,437,20.5,NA,30.3,NA,-9.8,0.026,0.026,Age
+Cervical Cancer Screening-incidence,Female recipients aged 40-49 years,Ages 40-49,197,16.8,NA,14.6,NA,2.2,0.812,0.812,Age
+Cervical Cancer Screening-incidence,Female recipients aged 50-64 years,Ages 50-64,222,24.1,NA,16.7,NA,7.4,0.228,0.228,Age
+Cervical Cancer Screening-incidence,Female recipients aged 21-64 years,All,1625,20.7,NA,25.9,NA,-5.2,0.015,0.015,All
+Cervical Cancer Screening-incidence,Black/African American female recipients aged 21-64 years,Black/African American,84,30,NA,31.8,NA,-1.8,1.000,1,Race
+Cervical Cancer Screening-incidence,Female recipients aged 21-64 years,Female,1625,20.7,NA,25.9,NA,-5.2,0.015,0.015,Sex
+Cervical Cancer Screening-incidence,Latino/a/x Race female recipients aged 21-64 years,Latino/a/x,178,17.3,NA,22.3,NA,-5,0.528,0.528,Race
+Cervical Cancer Screening-incidence,Other/Multiple Races female recipients aged 21-64 years,Other/Multiple Races,192,24.7,NA,25.2,NA,-0.5,1.000,1,Race
+Cervical Cancer Screening-incidence,Rural female recipients aged 21-64 years,Rural,342,22.8,NA,23.4,NA,-0.6,1.000,1,Residency
+Cervical Cancer Screening-incidence,Unknown/Missing/Decline Race female recipients aged 21-64 years,Unknown/Missing/Decline,206,18,NA,24.8,NA,-6.8,0.317,0.317,Race
+Cervical Cancer Screening-incidence,Urban female recipients aged 21-64 years,Urban,1283,20.1,NA,26.6,NA,-6.5,0.008,0.008,Residency
+Cervical Cancer Screening-incidence,White female recipients aged 21-64 years,White,965,20.2,NA,26.6,NA,-6.4,0.023,0.023,Race
+Clinical Depression Screening,Recipients aged 18-29 years with an outpatient visit during the measurement year,Ages 18-29,1858,9.9,NA,9.2,NA,0.7,0.667,0.667,Age
+Clinical Depression Screening,Recipients aged 30-39 years with an outpatient visit during the measurement year,Ages 30-39,856,11.5,NA,9.9,NA,1.6,0.529,0.529,Age
+Clinical Depression Screening,Recipients aged 40-49 years with an outpatient visit during the measurement year,Ages 40-49,408,11.5,NA,6.1,NA,5.4,0.088,0.088,Age
+Clinical Depression Screening,Recipients aged 50-64 years with an outpatient visit during the measurement year,Ages 50-64,416,8.7,NA,7,NA,1.7,0.627,0.627,Age
+Clinical Depression Screening,Recipients aged 18-64 years with an outpatient visit during the measurement year,All,3538,10.4,NA,8.7,NA,1.7,0.120,0.12,All
+Clinical Depression Screening,Black/African American recipients aged 18-64 years with an outpatient visit during the measurement year,Black/African American,198,11,NA,6.7,NA,4.3,0.429,0.429,Race
+Clinical Depression Screening,Female recipients aged 18-64 years with an outpatient visit during the measurement year,Female,1700,11.1,NA,8.7,NA,2.4,0.123,0.123,Sex
+Clinical Depression Screening,Latino/a/x recipients aged 18-64 years with an outpatient visit during the measurement year,Latino/a/x,418,10.3,NA,8,NA,2.3,0.513,0.513,Race
+Clinical Depression Screening,Males aged 18-64 years with an outpatient visit during the measurement year,Male,1838,9.8,NA,8.8,NA,1,0.530,0.53,Sex
+Clinical Depression Screening,Other/Multiple Race recipients aged 18-64 years with an outpatient visit during the measurement year,Other/Multiple Races,392,10.5,NA,7.4,NA,3.1,0.381,0.381,Race
+Clinical Depression Screening,Rural recipients aged 18-64 years with an outpatient visit during the measurement year,Rural,751,4.4,NA,5.9,NA,-1.5,0.447,0.447,Residency
+Clinical Depression Screening,Unknown/Missing/Decline Race recipients aged 18-64 years with an outpatient visit during the measurement year,Unknown/Missing/Decline,472,8.6,NA,9.9,NA,-1.3,0.745,0.745,Race
+Clinical Depression Screening,Urban recipients aged 18-64 years with an outpatient visit during the measurement year,Urban,2787,12,NA,9.5,NA,2.5,0.044,0.044,Residency
+Clinical Depression Screening,White recipients aged 18-64 years with an outpatient visit during the measurement year,White,2058,10.7,NA,9.1,NA,1.6,0.261,0.261,Race
+Diabetes Management (HbA1c),Recipients aged 18-29 years with a diagnosis of diabetes,Ages 18-29,63,86.3,NA,91.7,NA,-5.4,0.982,0.982,Age
+Diabetes Management (HbA1c),Recipients aged 30-39 years with a diagnosis of diabetes,Ages 30-39,54,92.9,NA,83.3,NA,9.6,0.661,0.661,Age
+Diabetes Management (HbA1c),Recipients aged 40-49 years with a diagnosis of diabetes,Ages 40-49,68,93.6,NA,85.7,NA,7.9,0.549,0.549,Age
+Diabetes Management (HbA1c),Recipients aged 50-64 years with a diagnosis of diabetes,Ages 50-64,106,92.3,NA,82.9,NA,9.4,0.242,0.242,Age
+Diabetes Management (HbA1c),Recipients aged 18-64 years with a diagnosis of diabetes,All,291,91.2,NA,84.9,NA,6.3,0.164,0.164,All
+Diabetes Management (HbA1c),Black/African American recipients aged 18-64 years with a diagnosis of diabetes,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Diabetes Management (HbA1c),Female recipients aged 18-64 years with a diagnosis of diabetes,Female,146,88.6,NA,82.9,NA,5.7,0.524,0.524,Sex
+Diabetes Management (HbA1c),Latino/a/x recipients aged 18-64 years with a diagnosis of diabetes,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Diabetes Management (HbA1c),Males aged 18-64 years with a diagnosis of diabetes,Male,145,94,NA,86.7,NA,7.3,0.247,0.247,Sex
+Diabetes Management (HbA1c),Other/Multiple Race recipients aged 18-64 years with a diagnosis of diabetes,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Diabetes Management (HbA1c),Rural recipients aged 18-64 years with a diagnosis of diabetes,Rural,63,86,NA,80,NA,6,0.810,0.81,Residency
+Diabetes Management (HbA1c),Unknown/Missing/Decline Race recipients aged 18-64 years with a diagnosis of diabetes,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Diabetes Management (HbA1c),Urban recipients aged 18-64 years with a diagnosis of diabetes,Urban,228,92.6,NA,86.4,NA,6.2,0.221,0.221,Residency
+Diabetes Management (HbA1c),White recipients aged 18-64 years with a diagnosis of diabetes,White,175,90.7,NA,78.3,NA,12.4,0.054,0.054,Race
+ED Utilization,Recipients aged 18-29 years,Ages 18-29,2192,1208.0,(3827.2),542.0,(1500.7),666.1,0.000,0,Age
+ED Utilization,Recipients aged 30-39 years,Ages 30-39,1010,2091.1,(10591.0),705.0,(1956.4),1386.1,0.004,0.004,Age
+ED Utilization,Recipients aged 40-49 years,Ages 40-49,468,2017.1,(5729.2),594.0,(1374.9),1423.1,0.000,0,Age
+ED Utilization,Recipients aged 50-64 years,Ages 50-64,462,1697.0,(3572.1),761.9,(1438.5),935.1,0.000,0,Age
+ED Utilization,Recipients aged 18-64 years,All,4132,1570.2,(6358.4),612.3,(1606.0),957.9,0.000,0,All
+ED Utilization,Black/African American recipients aged 18-64 years,Black/African American,224,1866.1,(3879.9),937.5,(1871.0),928.6,0.024,0.024,Race
+ED Utilization,Female recipients aged 18-64 years,Female,1888,1727.8,(5067.8),682.2,(1660.0),1045.6,0.000,0,Sex
+ED Utilization,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,1431.5,(4842.8),411.3,(1148.9),1020.2,0.001,0.001,Race
+ED Utilization,Males aged 18-64 years,Male,2244,1437.6,(7268.5),553.5,(1557.5),884.1,0.000,0,Sex
+ED Utilization,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,1655.2,(5482.1),590.5,(1579.2),1064.7,0.005,0.005,Race
+ED Utilization,Rural recipients aged 18-64 years,Rural,880,1136.4,(3479.8),586.4,(1291.9),550,0.002,0.002,Residency
+ED Utilization,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,1253.6,(4445.3),503.6,(1126.5),750,0.007,0.007,Race
+ED Utilization,Urban recipients aged 18-64 years,Urban,3252,1687.6,(6931.1),619.3,(1681.3),1068.3,0.000,0,Residency
+ED Utilization,White recipients aged 18-64 years,White,2396,1627.7,(7289.1),652.8,(1748.5),975,0.000,0,Race
+ED Visits for Suicidal Ideation,Recipients aged 18-29 years,Ages 18-29,2192,3.6,(60.3),0.9,(30.2),2.7,0.179,0.179,Age
+ED Visits for Suicidal Ideation,Recipients aged 30-39 years,Ages 30-39,1010,29.7,(585.1),0.0,(0.0),29.7,0.255,0.255,Age
+ED Visits for Suicidal Ideation,Recipients aged 40-49 years,Ages 40-49,468,4.3,(65.4),0.0,(0.0),4.3,0.318,0.318,Age
+ED Visits for Suicidal Ideation,Recipients aged 50-64 years,Ages 50-64,462,26.0,(245.3),0.0,(0.0),26,0.109,0.109,Age
+ED Visits for Suicidal Ideation,Recipients aged 18-64 years,All,4132,12.6,(304.7),0.5,(22.0),12.1,0.072,0.072,All
+ED Visits for Suicidal Ideation,Black/African American recipients aged 18-64 years,Black/African American,224,8.9,(94.5),0.0,(0.0),8.9,0.319,0.319,Race
+ED Visits for Suicidal Ideation,Female recipients aged 18-64 years,Female,1888,13.8,(155.6),0.0,(0.0),13.8,0.007,0.007,Sex
+ED Visits for Suicidal Ideation,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,0.0,(0.0),0.0,(0.0),0,NA,NA,Race
+ED Visits for Suicidal Ideation,Males aged 18-64 years,Male,2244,11.6,(388.1),0.9,(29.9),10.7,0.358,0.358,Sex
+ED Visits for Suicidal Ideation,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,0.0,(0.0),0.0,(0.0),0,NA,NA,Race
+ED Visits for Suicidal Ideation,Rural recipients aged 18-64 years,Rural,880,11.4,(157.9),0.0,(0.0),11.4,0.132,0.132,Residency
+ED Visits for Suicidal Ideation,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.1,(782.5),0.0,(0.0),47.1,0.318,0.318,Race
+ED Visits for Suicidal Ideation,Urban recipients aged 18-64 years,Urban,3252,12.9,(333.5),0.6,(24.8),12.3,0.138,0.138,Residency
+ED Visits for Suicidal Ideation,White recipients aged 18-64 years,White,2396,10.0,(135.2),0.8,(28.9),9.2,0.022,0.022,Race
+Engagement of SUD Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,10.2,NA,24.7,NA,-14.5,0.055,0.055,Age
+Engagement of SUD Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,12.8,NA,19.2,NA,-6.4,0.596,0.596,Age
+Engagement of SUD Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Engagement of SUD Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Engagement of SUD Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,15.3,NA,19.9,NA,-4.6,0.379,0.379,All
+Engagement of SUD Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Engagement of SUD Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,22.7,NA,10.7,NA,12,0.131,0.131,Sex
+Engagement of SUD Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Engagement of SUD Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,8.5,NA,24.5,NA,-16,0.011,0.011,Sex
+Engagement of SUD Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Engagement of SUD Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,17.6,NA,9.7,NA,7.9,0.569,0.569,Residency
+Engagement of SUD Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Engagement of SUD Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,14.6,NA,22.2,NA,-7.6,0.184,0.184,Residency
+Engagement of SUD Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,11.2,NA,19,NA,-7.8,0.215,0.215,Race
+Initiation of SUD Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,35.6,NA,34.2,NA,1.4,1.000,1,Age
+Initiation of SUD Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,23.1,NA,30.8,NA,-7.7,0.564,0.564,Age
+Initiation of SUD Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Initiation of SUD Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Initiation of SUD Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,33.6,NA,32.5,NA,1.1,0.944,0.944,All
+Initiation of SUD Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Initiation of SUD Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,40.9,NA,17.9,NA,23,0.010,0.01,Sex
+Initiation of SUD Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Initiation of SUD Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,26.8,NA,40,NA,-13.2,0.096,0.096,Sex
+Initiation of SUD Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Initiation of SUD Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,29.4,NA,22.6,NA,6.8,0.731,0.731,Residency
+Initiation of SUD Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,Race
+Initiation of SUD Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,35,NA,34.8,NA,0.2,1.000,1,Residency
+Initiation of SUD Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,33.8,NA,32.4,NA,1.4,0.969,0.969,Race
+Nonfatal Suicide Attempts and Self-Harm,Recipients aged 18-29 years,Ages 18-29,2192,2.6,NA,0.5,NA,2.1,<0.001,0.001,Age
+Nonfatal Suicide Attempts and Self-Harm,Recipients aged 30-39 years,Ages 30-39,1010,1.4,NA,0.6,NA,0.8,0.340,0.34,Age
+Nonfatal Suicide Attempts and Self-Harm,Recipients aged 40-49 years,Ages 40-49,468,2.6,NA,0.4,NA,2.2,0.128,0.128,Age
+Nonfatal Suicide Attempts and Self-Harm,Recipients aged 50-64 years,Ages 50-64,462,1.7,NA,0,NA,1.7,0.132,0.132,Age
+Nonfatal Suicide Attempts and Self-Harm,Recipients aged 18-64 years,All,4132,2.2,NA,0.5,NA,1.7,<0.001,0.001,All
+Nonfatal Suicide Attempts and Self-Harm,Black/African American recipients aged 18-64 years,Black/African American,224,3.6,NA,0,NA,3.6,0.130,0.13,Race
+Nonfatal Suicide Attempts and Self-Harm,Female recipients aged 18-64 years,Female,1888,3.5,NA,0.5,NA,3,<0.001,0.001,Sex
+Nonfatal Suicide Attempts and Self-Harm,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,1.6,NA,1.2,NA,0.4,1.000,1,Race
+Nonfatal Suicide Attempts and Self-Harm,Males aged 18-64 years,Male,2244,1.1,NA,0.4,NA,0.7,0.144,0.144,Sex
+Nonfatal Suicide Attempts and Self-Harm,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,3,NA,0.9,NA,2.1,0.178,0.178,Race
+Nonfatal Suicide Attempts and Self-Harm,Rural recipients aged 18-64 years,Rural,880,2.5,NA,0.2,NA,2.3,0.009,0.009,Residency
+Nonfatal Suicide Attempts and Self-Harm,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,0.7,NA,0.7,NA,0,1.000,1,Race
+Nonfatal Suicide Attempts and Self-Harm,Urban recipients aged 18-64 years,Urban,3252,2.1,NA,0.6,NA,1.5,<0.001,0.001,Residency
+Nonfatal Suicide Attempts and Self-Harm,White recipients aged 18-64 years,White,2396,2.3,NA,0.3,NA,2,<0.001,0.001,Race
+Preventive Dental Services,Recipients aged 18-29 years,Ages 18-29,2192,46.4,NA,20.9,NA,25.5,<0.001,0.001,Age
+Preventive Dental Services,Recipients aged 30-39 years,Ages 30-39,1010,45.1,NA,21.2,NA,23.9,<0.001,0.001,Age
+Preventive Dental Services,Recipients aged 40-49 years,Ages 40-49,468,42.3,NA,19.2,NA,23.1,<0.001,0.001,Age
+Preventive Dental Services,Recipients aged 50-64 years,Ages 50-64,462,32,NA,17.3,NA,14.7,<0.001,0.001,Age
+Preventive Dental Services,Recipients aged 18-64 years,All,4132,44,NA,20.4,NA,23.6,<0.001,0.001,All
+Preventive Dental Services,Black/African American recipients aged 18-64 years,Black/African American,224,50,NA,23.2,NA,26.8,<0.001,0.001,Race
+Preventive Dental Services,Female recipients aged 18-64 years,Female,1888,45.1,NA,25.2,NA,19.9,<0.001,0.001,Sex
+Preventive Dental Services,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,46,NA,25.4,NA,20.6,<0.001,0.001,Race
+Preventive Dental Services,Males aged 18-64 years,Male,2244,43.1,NA,16.3,NA,26.8,<0.001,0.001,Sex
+Preventive Dental Services,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,42.2,NA,24.6,NA,17.6,<0.001,0.001,Race
+Preventive Dental Services,Rural recipients aged 18-64 years,Rural,880,43.9,NA,19.8,NA,24.1,<0.001,0.001,Residency
+Preventive Dental Services,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.5,NA,16.3,NA,31.2,<0.001,0.001,Race
+Preventive Dental Services,Urban recipients aged 18-64 years,Urban,3252,44.1,NA,20.5,NA,23.6,<0.001,0.001,Residency
+Preventive Dental Services,White recipients aged 18-64 years,White,2396,42.7,NA,19.2,NA,23.5,<0.001,0.001,Race
+Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 18-29 years with an outpatient visit during the measurement year,Ages 18-29,1858,9.4,NA,8.7,NA,0.7,0.690,0.69,Age
+Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 30-39 years with an outpatient visit during the measurement year,Ages 30-39,856,9.9,NA,9.1,NA,0.8,0.782,0.782,Age
+Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 40-49 years with an outpatient visit during the measurement year,Ages 40-49,408,7.9,NA,5.5,NA,2.4,0.449,0.449,Age
+Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 50-64 years with an outpatient visit during the measurement year,Ages 50-64,416,7.4,NA,7.5,NA,-0.1,1.000,1,Age
+Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 18-64 years with an outpatient visit during the measurement year,All,3538,9.1,NA,8.3,NA,0.8,0.416,0.416,All
+Screening for Alcohol or Other Substance Abuse Treatment,Black/African American recipients aged 18-64 years with an outpatient visit during the measurement year,Black/African American,198,9.2,NA,5.6,NA,3.6,0.502,0.502,Race
+Screening for Alcohol or Other Substance Abuse Treatment,Female recipients aged 18-64 years with an outpatient visit during the measurement year,Female,1700,9.9,NA,8.3,NA,1.6,0.306,0.306,Sex
+Screening for Alcohol or Other Substance Abuse Treatment,Latino/a/x recipients aged 18-64 years with an outpatient visit during the measurement year,Latino/a/x,418,9.1,NA,8,NA,1.1,0.816,0.816,Race
+Screening for Alcohol or Other Substance Abuse Treatment,Males aged 18-64 years with an outpatient visit during the measurement year,Male,1838,8.5,NA,8.2,NA,0.3,0.920,0.92,Sex
+Screening for Alcohol or Other Substance Abuse Treatment,Other/Multiple Race recipients aged 18-64 years with an outpatient visit during the measurement year,Other/Multiple Races,392,10,NA,7.4,NA,2.6,0.461,0.461,Race
+Screening for Alcohol or Other Substance Abuse Treatment,Rural recipients aged 18-64 years with an outpatient visit during the measurement year,Rural,751,3.7,NA,5,NA,-1.3,0.506,0.506,Residency
+Screening for Alcohol or Other Substance Abuse Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with an outpatient visit during the measurement year,Unknown/Missing/Decline,472,8.6,NA,9.4,NA,-0.8,0.887,0.887,Race
+Screening for Alcohol or Other Substance Abuse Treatment,Urban recipients aged 18-64 years with an outpatient visit during the measurement year,Urban,2787,10.6,NA,9.2,NA,1.4,0.240,0.24,Residency
+Screening for Alcohol or Other Substance Abuse Treatment,White recipients aged 18-64 years with an outpatient visit during the measurement year,White,2058,9.1,NA,8.5,NA,0.6,0.729,0.729,Race
