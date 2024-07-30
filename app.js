@@ -32,7 +32,7 @@ const DataDashboard = {
             </select>
         </div>
         <div id="tableContainer" class="mt-4">
-            <table id="table" class="table table-bordered" ref="table">
+            <table class="table table-bordered" ref="table">
             </table>
         </div>
 	</div>
@@ -42,6 +42,8 @@ const DataDashboard = {
     const selectedMeasure = ref("");
     const selectedCategory = ref("");
     const headers = ref([]);
+    const table = ref(null);
+    let dataTable;
 
     const filteredData = computed(() => {
       return csvData.value.filter(
@@ -97,47 +99,30 @@ const DataDashboard = {
       generateTable();
     };
 
-    const test = [
-      {
-          "name":       "Tiger Nixon",
-          "position":   "System Architect",
-          "salary":     "$3,120",
-          "start_date": "2011/04/25",
-          "office":     "Edinburgh",
-          "extn":       "5421"
-      },
-      {
-          "name":       "Garrett Winters",
-          "position":   "Director",
-          "salary":     "$5,300",
-          "start_date": "2011/07/25",
-          "office":     "Edinburgh",
-          "extn":       "8422"
-      }
-  ];
-
     const generateTable = () => {
-      if ($.fn.DataTable.isDataTable("#table")) {
-        $("#table").DataTable().destroy();
+      if (DataTable.isDataTable(table.value)) {
+        table.destroy();
       }
-      $("#table").DataTable({
+      dataTable = new DataTable(table.value, {
         data: filteredData.value,
-        columns: headers.value.map((header) => ({ data: header, title: header })),
+        columns: headers.value.map((header) => ({
+          data: header,
+          title: header,
+        })),
         rowCallback: function (row, data) {
           if (data.p_value_numeric < 0.05) {
-            $(row).addClass('significant');
+            $(row).addClass("significant");
           }
         },
       });
     };
 
     const updateTable = () => {
-      const table = $("#table").DataTable();
-      table.clear();
+      dataTable.clear();
       filteredData.value.forEach((row) => {
-        table.row.add(Object.values(row));
+        dataTable.row.add(row);
       });
-      table.draw();
+      dataTable.draw();
     };
 
     onMounted(() => {
@@ -151,7 +136,8 @@ const DataDashboard = {
       categories,
       selectedCategory,
       headers,
-      updateTable
+      table,
+      updateTable,
     };
   },
 };
