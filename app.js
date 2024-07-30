@@ -98,16 +98,34 @@ const DataDashboard = {
       generateTable();
     };
 
+    const test = [
+      {
+          "name":       "Tiger Nixon",
+          "position":   "System Architect",
+          "salary":     "$3,120",
+          "start_date": "2011/04/25",
+          "office":     "Edinburgh",
+          "extn":       "5421"
+      },
+      {
+          "name":       "Garrett Winters",
+          "position":   "Director",
+          "salary":     "$5,300",
+          "start_date": "2011/07/25",
+          "office":     "Edinburgh",
+          "extn":       "8422"
+      }
+  ];
+
     const generateTable = () => {
       if ($.fn.DataTable.isDataTable("#table")) {
         $("#table").DataTable().destroy();
       }
       $("#table").DataTable({
-        data: filteredData.value.map((row) => Object.values(row)),
-        columns: headers.value.map((header) => ({ title: header })),
+        data: filteredData.value,
+        columns: headers.value.map((header) => ({ data: header, title: header })),
         rowCallback: function (row, data) {
-          // TODO: Can we make the index dynamic based on the header?
-          if (data[10] < 0.05) {
+          if (data.p_value_numeric < 0.05) {
             $(row).addClass('significant');
           }
         },
