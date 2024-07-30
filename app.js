@@ -4,7 +4,7 @@ const DataDashboard = {
   template: `
 	<div>
         <div class="form-group">
-            <label for="measureSelect" class="form-label required-field">Choose a Measure</label>
+            <label for="measure" class="form-label required-field">Choose a Measure</label>
             <select v-model="selectedMeasure"
                 class="form-select"
                 id="measure"
@@ -18,7 +18,7 @@ const DataDashboard = {
             </select>
         </div>
         <div class="form-group">
-            <label for="categorySelect" class="form-label required-field">Choose a Category</label>
+            <label for="category" class="form-label required-field">Choose a Category</label>
             <select v-model="selectedCategory"
                 class="form-select"
                 id="category"
@@ -32,7 +32,7 @@ const DataDashboard = {
             </select>
         </div>
         <div id="tableContainer" class="mt-4">
-            <table id="table" class="table-bordered" ref="table">
+            <table id="table" class="table table-bordered" ref="table">
             </table>
         </div>
 	</div>
