@@ -17,7 +17,7 @@ const DataDashboard = {
                 </option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group mt-4">
             <label for="category" class="form-label required-field">Choose a Category</label>
             <select v-model="selectedCategory"
                 class="form-select"
@@ -31,8 +31,8 @@ const DataDashboard = {
                 </option>
             </select>
         </div>
-        <div id="tableContainer" class="mt-4">
-            <table class="table table-bordered" ref="table">
+        <div id="tableContainer">
+            <table class="table rounded-corners" ref="table">
             </table>
         </div>
 	</div>
@@ -41,7 +41,6 @@ const DataDashboard = {
     const csvData = ref([]);
     const selectedMeasure = ref("");
     const selectedCategory = ref("");
-    const headers = ref([]);
     const table = ref(null);
     let dataTable;
 
@@ -91,8 +90,11 @@ const DataDashboard = {
     };
 
     const initialize = (results) => {
-      csvData.value = results.data;
-      headers.value = Object.keys(csvData.value[0]);
+      // Add an asterisk to significant results
+      csvData.value = results.data.map(
+        obj => ({ ...obj, 
+          stratification_display: `${obj.stratification} ${(1 === obj.p_significant) ? '*':''}`,
+        }))
       selectedMeasure.value = measures.value[0];
       selectedCategory.value = categories.value[0];
 
@@ -104,14 +106,37 @@ const DataDashboard = {
         table.destroy();
       }
       dataTable = new DataTable(table.value, {
+        paging: false,
         data: filteredData.value,
-        columns: headers.value.map((header) => ({
-          data: header,
-          title: header,
-        })),
+        columns: [
+          {
+            data: 'stratification_display',
+            title: 'Stratification',
+          },
+          {
+            data: 'total_n',
+            title: 'Count'
+          },
+          {
+            data: 'non_idd_estimate_string',
+            title: 'Non-IDD Estimate'
+          },
+          {
+            data: 'idd_estimate_string',
+            title: 'IDD Estimate'
+          },
+          {
+            data: 'difference_in_estimates',
+            title: 'Difference'
+          }
+        ],
         rowCallback: function (row, data) {
-          if (data.p_value_numeric < 0.05) {
-            $(row).addClass("significant");
+          if (1 === data.p_significant) {
+            if (0 === data.outcome_directionality) {
+              $(row).addClass("significant-idd-row");
+            } else if (1 === data.outcome_directionality) {
+              $(row).addClass("significant-nonidd-row");
+            }
           }
         },
       });
@@ -135,7 +160,6 @@ const DataDashboard = {
       selectedMeasure,
       categories,
       selectedCategory,
-      headers,
       table,
       updateTable,
     };
