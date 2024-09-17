@@ -73,7 +73,9 @@ const DataDashboard = {
     });
 
     const fetchCSVData = () => {
-      fetch("http://localhost:8000/data.csv")
+      const location = window.location.href;
+      const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
+      fetch(prefix + "/data.csv")
         .then((response) => response.text())
         .then((csvText) => {
           Papa.parse(csvText, {
@@ -92,7 +94,7 @@ const DataDashboard = {
     const initialize = (results) => {
       // Add an asterisk to significant results
       csvData.value = results.data.map(
-        obj => ({ ...obj, 
+        obj => ({ ...obj,
           stratification_display: `${obj.stratification} ${(1 === obj.p_significant) ? '*':''}`,
         }))
       selectedMeasure.value = measures.value[0];

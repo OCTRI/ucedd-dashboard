@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ucedd-dev
+spec:
+  selector:
+    app: ucedd-dev
+  ports:
+  - port: 80
+    targetPort: 80
+    name: http
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: ucedd-dev
+spec:
+  hostname: octridev.ohsu.edu
+  prefix: /ucedd-dashboard
+  rewrite: /ucedd-dashboard
+  service: ucedd-dev:80
