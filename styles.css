@@ -10,22 +10,22 @@ h2 {
 }
 
 #tableContainer {
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
-table.rounded-corners { 
+table.rounded-corners {
     --border: 1px solid darkgrey;
 
     border: var(--border);
-    border-radius: 10px; 
+    border-radius: 10px;
     border-spacing: 0;
     border-collapse: separate;
     overflow: hidden;
 }
-table.rounded-corners td, 
+table.rounded-corners td,
 table.rounded-corners th {
     border-bottom: var(--border);
-    padding: 10px; 
+    padding: 10px;
 }
 table.rounded-corners th:not(:last-child),
 table.rounded-corners td:not(:last-child) {

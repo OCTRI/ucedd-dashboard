@@ -3,33 +3,33 @@ const { ref, computed, reactive, onMounted, createApp } = Vue;
 const DataDashboard = {
   template: `
 	<div>
-        <div class="form-group">
-            <label for="measure" class="form-label required-field">Choose a Measure</label>
-            <select v-model="selectedMeasure"
-                class="form-select"
-                id="measure"
-                name="measure"
-                @change="updateTable"
-                required
-            >
-                <option v-for="measure in measures" :key="measure" :value="measure">
-                {{ measure }}
-                </option>
-            </select>
-        </div>
-        <div class="form-group mt-4">
-            <label for="category" class="form-label required-field">Choose a Category</label>
-            <select v-model="selectedCategory"
-                class="form-select"
-                id="category"
-                name="category"
-                @change="updateTable"
-                required
-            >
-                <option v-for="category in categories" :key="category" :value="category">
-                {{ category }}
-                </option>
-            </select>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="measure" class="form-label required-field">Choose a Measure</label>
+                <select v-model="selectedMeasure"
+                    class="form-select"
+                    id="measure"
+                    @change="updateTable"
+                    required
+                >
+                    <option v-for="measure in measures" :key="measure" :value="measure">
+                    {{ measure }}
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="category" class="form-label required-field">Choose a Category</label>
+                <select v-model="selectedCategory"
+                    class="form-select"
+                    id="category"
+                    @change="updateTable"
+                    required
+                >
+                    <option v-for="category in categories" :key="category" :value="category">
+                    {{ category }}
+                    </option>
+                </select>
+            </div>
         </div>
         <div id="tableContainer">
             <table class="table rounded-corners" ref="table">
