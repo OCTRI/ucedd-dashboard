@@ -1,4 +1,6 @@
 :root {
+    /* override the Bootstrap font stack */
+    --bs-font-sans-serif: Lato,Helvetica,Arial,sans-serif;
     --significant-idd-outcome: #fee7d5;
     --significant-nonidd-outcome: #dfe3f2;
 }
