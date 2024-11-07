@@ -132,6 +132,10 @@ const DataDashboard = {
             title: 'Difference'
           }
         ],
+        layout: {
+          topStart: 'info',
+          bottomStart: null
+        },
         rowCallback: function (row, data) {
           if (1 === data.p_significant) {
             if (0 === data.outcome_directionality) {
