@@ -2,9 +2,40 @@
 
 This Vue application displays the 2022 summary data for Medicaid members provided by CHSE.
 
-Clone and run `python3 -m http.server 8000` to view the dashboard.
+## Dependencies
 
-# Data Description
+The application is built using [Vite](https://vite.dev/), which depends on [Node.js](https://nodejs.org/en).
+
+A good way to install multiple, isolated versions of Node.js is [nvm](https://github.com/nvm-sh/nvm). On Macs, you can install nvm using Homebrew.
+
+```
+brew install nvm
+```
+
+Install Node.js 22 and use it.
+
+```
+nvm install v22
+nvm use
+```
+
+Finally, install the dependencies using `npm`.
+
+```
+npm install
+```
+
+## Running Locally
+
+To Vite dev server can be used to run the application locally.
+
+```
+npm run dev
+```
+
+This will serve the application at https://localhost:8000/. Vite performs hot module replacement, so your changes will immediately be reflected in the browser.
+
+## Data Description
 
 The data file included contains the following columns:
 
@@ -19,7 +50,7 @@ The data file included contains the following columns:
 |non_idd_estimate_numeric|The numeric portion of the estimate for the Non-IDD population|
 |non_idd_error|The error portion of the estimate for the non-IDD population for measures reported as a rate|
 |difference_in_estimates|The raw difference between the two numeric estimates|
-|p_value|The statistical measurment used to determine whether the differences are significant|
+|p_value|The statistical measurement used to determine whether the differences are significant|
 |outcome_count|1 if the outcome is reported as a rate (mean(sd) per 1000 member years) and 0 if the outcome is binary (percent).|
 |p_significant|1 if the p-value is significant (p<0.05), 0 if not (p>0.05)|
 |outcome_directionality|1 if the results indicate poorer outcomes for the non-IDD community and 0 if the results indicate poorer outcomes for the IDD community. NA signifies either missing data or insignificant outcomes.|
