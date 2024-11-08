@@ -9,8 +9,11 @@ pipeline {
     DEFAULT_BRANCH = 'main'
     DEPLOYMENT_FILE = 'k8s/dev/'
   }
+  tools {
+    nodejs 'Node 22 LTS'
+  }
   triggers {
-    // Needed to trigger builds from Bitbucket
+    // Needed to trigger builds via webhook
     pollSCM('')
   }
   stages {
@@ -20,6 +23,14 @@ pipeline {
         checkout scm
       }
     }
+    stage('Build') {
+      steps {
+        sh '''
+        npm install
+        npm run build
+        '''
+      }
+    }
     stage('Deploy to octridev') {
       when {
         branch env.DEFAULT_BRANCH
@@ -27,15 +38,9 @@ pipeline {
       steps {
         applyKubernetesManifests(env.DEPLOYMENT_FILE)
 
-        // TODO: Copying build tool output to the container would be safer
         sh '''
-        mkdir ucedd-dashboard
-        cp *.html ucedd-dashboard
-        cp *.css ucedd-dashboard
-        cp *.js ucedd-dashboard
-        cp data.csv ucedd-dashboard
         POD_ID=`kubectl get pods --no-headers -l app=ucedd-dev -o custom-columns=":metadata.name" | head -1`
-        kubectl cp ucedd-dashboard $POD_ID:/workdir/webroot -c apache-sidecar
+        kubectl cp dist $POD_ID:/workdir/webroot -c apache-sidecar
 
         # restart in case of ConfigMap changes
         kubectl rollout restart deploy/ucedd-dev
