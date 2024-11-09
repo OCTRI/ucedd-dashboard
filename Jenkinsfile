@@ -40,7 +40,7 @@ pipeline {
 
         sh '''
         POD_ID=`kubectl get pods --no-headers -l app=ucedd-dev -o custom-columns=":metadata.name" | head -1`
-        kubectl cp dist $POD_ID:/workdir/webroot -c apache-sidecar
+        kubectl cp ucedd-dashboard $POD_ID:/workdir/webroot -c apache-sidecar
 
         # restart in case of ConfigMap changes
         kubectl rollout restart deploy/ucedd-dev

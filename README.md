@@ -33,7 +33,7 @@ The Vite dev server can be used to run the application locally.
 npm run dev
 ```
 
-This will serve the application at https://localhost:8000/. Vite performs hot module replacement, so your changes will immediately be reflected in the browser.
+This will serve the application at https://localhost:8000/ucedd-dashboard/. Vite performs hot module replacement, so your changes will immediately be reflected in the browser.
 
 ## Data Description
 
