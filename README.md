@@ -27,7 +27,7 @@ npm install
 
 ## Running Locally
 
-To Vite dev server can be used to run the application locally.
+The Vite dev server can be used to run the application locally.
 
 ```
 npm run dev
