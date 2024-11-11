@@ -56,3 +56,7 @@ tr.significant-nonidd-row td {
     color: black;
     background-color: var(--significant-nonidd-outcome) !important;
 }
+
+#chart-wrapper {
+    min-height: 400px;
+}
