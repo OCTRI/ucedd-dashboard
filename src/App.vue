@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import Table from './components/Table.vue';
+import BarChart from '@/components/BarChart.vue';
+import Table from '@/components/Table.vue';
 import Papa from 'papaparse';
 import DataRow from '@/types/DataRow';
 import DisplayRow from '@/types/DisplayRow';
@@ -112,7 +113,7 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">
-      <p>This will contain a bar chart for the selections.</p>
+      <BarChart :data=filteredData />
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
       <p>This will contain a summary of the measure and key findings specific to it.</p>
