@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import BarChart from '@/components/BarChart.vue';
 import Table from '@/components/Table.vue';
 import Papa from 'papaparse';
+import Tab from 'bootstrap/js/dist/tab';
 import DataRow from '@/types/DataRow';
 import DisplayRow from '@/types/DisplayRow';
 
@@ -71,6 +72,8 @@ const initialize = (results: Papa.ParseResult<DataRow>) => {
 };
 
 onMounted(() => {
+  const tabs = document.querySelectorAll('#pills-tab button');
+  tabs.forEach(el => new Tab(el));
   fetchCSVData();
 });
 
