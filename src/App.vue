@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import BarChart from '@/components/BarChart.vue';
+import Summary from '@/components/Summary.vue';
 import Table from '@/components/Table.vue';
 import Papa from 'papaparse';
 import DataRow from '@/types/DataRow';
 import DisplayRow from '@/types/DisplayRow';
+import MeasureRow from '@/types/MeasureRow';
 
 const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>("");
 const selectedCategory = ref<string>("");
+const measureRows = ref<Array<MeasureRow>>([]);
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
@@ -39,6 +42,22 @@ const filteredData = computed(() => {
   return all;
 });
 
+const selectedMeasureRow = computed(() => {
+  const row = measureRows.value.filter((row) => row.measure === selectedMeasure.value);
+  if (!row.length) {
+    return {
+      measure: selectedMeasure.value,
+      description: "",
+      all: "",
+      age: "",
+      race: "",
+      residency: "",
+      sex: "",
+    }
+  }
+  return row[0];
+});
+
 const fetchCSVData = () => {
   const location = window.location.href;
   const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
@@ -50,6 +69,25 @@ const fetchCSVData = () => {
         dynamicTyping: true,
         complete: (results) => {
           initialize(results);
+        },
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching the CSV file:", error);
+    });
+};
+
+const fetchMeasureSummary = () => {
+  const location = window.location.href;
+  const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
+  fetch(prefix + "/measures.csv")
+    .then((response) => response.text())
+    .then((csvText) => {
+      Papa.parse<MeasureRow>(csvText, {
+        header: true,
+        dynamicTyping: true,
+        complete: (results) => {
+          measureRows.value = results.data;
         },
       });
     })
@@ -72,6 +110,7 @@ const initialize = (results: Papa.ParseResult<DataRow>) => {
 
 onMounted(() => {
   fetchCSVData();
+  fetchMeasureSummary();
 });
 
 
@@ -116,7 +155,7 @@ onMounted(() => {
       <BarChart :data=filteredData />
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
-      <p>This will contain a summary of the measure and key findings specific to it.</p>
+      <Summary :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
       <Table :data=filteredData />
