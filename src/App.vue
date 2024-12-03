@@ -117,10 +117,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 class="mb-4">Outcome levels, differences for Medicaid members with IDD and comparison population (2022)</h2>
   <div class="row g-3">
     <div class="col-md-6">
-      <label for="measure" class="form-label required-field">Choose a Measure</label>
+      <label for="measure" class="form-label">Choose a Measure</label>
       <select v-model="selectedMeasure" class="form-select" id="measure" required>
         <option v-for="measure in measures" :key="measure" :value="measure">
           {{ measure }}
@@ -128,7 +127,7 @@ onMounted(() => {
       </select>
     </div>
     <div class="col-md-6">
-      <label for="category" class="form-label required-field">Choose a Category</label>
+      <label for="category" class="form-label">Choose a Category</label>
       <select v-model="selectedCategory" class="form-select" id="category" required>
         <option v-for="category in categories" :key="category" :value="category">
           {{ category }}
@@ -152,7 +151,7 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">
-      <BarChart :data=filteredData />
+      <BarChart :data=filteredData :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
       <Summary :category=selectedCategory :summary=selectedMeasureRow />

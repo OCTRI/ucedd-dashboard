@@ -28,7 +28,7 @@ const allFinding = computed(() => {
 });
 
 const hasFindings = computed(() => {
-    return categoryFinding || allFinding;
+    return categoryFinding.value !== null || allFinding.value !== null;
 });
 
 watch(() => props.summary, (newData) => {
@@ -40,13 +40,16 @@ watch(() => props.summary, (newData) => {
 
 <template>
     <h4>{{props.summary.measure}} by {{ props.category }}</h4>
-    <p v-if="description">Description: {{ props.summary.description }}</p>
-    <ul v-if="hasFindings">
-        <li v-if="allFinding">
-            {{ allFinding }}
-        </li>
-        <li v-if="categoryFinding">
-            {{ categoryFinding }}
-        </li>
-    </ul>
+    <p v-if="description"><em>Description: {{ props.summary.description }}</em></p>
+    <div v-if="hasFindings">
+        <h5>Key Findings</h5>
+        <ul>
+            <li v-if="allFinding">
+                {{ allFinding }}
+            </li>
+            <li v-if="categoryFinding">
+                {{ categoryFinding }}
+            </li>
+        </ul>
+    </div>
 </template>
