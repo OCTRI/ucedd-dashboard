@@ -8,6 +8,14 @@ export default defineConfig({
   build: {
     outDir: 'ucedd-dashboard'
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        silenceDeprecations: ['color-functions', 'global-builtin', 'import', 'mixed-decls']
+      }
+    }
+  },
   plugins: [vue()],
   resolve: {
     alias: {
