@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import BarChart from '@/components/BarChart.vue';
+import Summary from '@/components/Summary.vue';
 import Table from '@/components/Table.vue';
 import Papa from 'papaparse';
 import Tab from 'bootstrap/js/dist/tab';
 import DataRow from '@/types/DataRow';
 import DisplayRow from '@/types/DisplayRow';
+import MeasureRow from '@/types/MeasureRow';
 
 const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>("");
 const selectedCategory = ref<string>("");
+const measureRows = ref<Array<MeasureRow>>([]);
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
@@ -40,23 +43,58 @@ const filteredData = computed(() => {
   return all;
 });
 
-const fetchCSVData = () => {
+const selectedMeasureRow = computed(() => {
+  const row = measureRows.value.filter((row) => row.measure === selectedMeasure.value);
+  if (!row.length) {
+    return {
+      measure: selectedMeasure.value,
+      description: "",
+      all: "",
+      age: "",
+      race: "",
+      residency: "",
+      sex: "",
+    }
+  }
+  return row[0];
+});
+
+const pathPrefix = () => {
   const location = window.location.href;
-  const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
-  fetch(prefix + "/data.csv")
-    .then((response) => response.text())
-    .then((csvText) => {
-      Papa.parse<DataRow>(csvText, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          initialize(results);
-        },
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching the CSV file:", error);
+  return location.endsWith("/") ? location.slice(0, location.length - 1) : location;
+}
+
+const fetchCSVData = async () => {
+  try {
+    const response = await fetch(pathPrefix() + "/data.csv");
+    const csvText = await response.text();
+    Papa.parse<DataRow>(csvText, {
+      header: true,
+      dynamicTyping: true,
+      complete: (results) => {
+        initialize(results);
+      },
     });
+  } catch (error) {
+    console.error("Error fetching the CSV file:", error);
+  }
+
+};
+
+const fetchMeasureSummary = async () => {
+  try {
+    const response = await fetch(pathPrefix() + "/measures.csv");
+    const csvText = await response.text();
+    Papa.parse<MeasureRow>(csvText, {
+      header: true,
+      dynamicTyping: true,
+      complete: (results) => {
+        measureRows.value = results.data;
+      },
+    });
+  } catch (error) {
+    console.error("Error fetching the CSV file:", error);
+  }
 };
 
 const initialize = (results: Papa.ParseResult<DataRow>) => {
@@ -75,16 +113,16 @@ onMounted(() => {
   const tabs = document.querySelectorAll('#pills-tab button');
   tabs.forEach(el => new Tab(el));
   fetchCSVData();
+  fetchMeasureSummary();
 });
 
 
 </script>
 
 <template>
-  <h2 class="mb-4">Outcome levels, differences for Medicaid members with IDD and comparison population (2022)</h2>
   <div class="row g-3">
     <div class="col-md-6">
-      <label for="measure" class="form-label required-field">Choose a Measure</label>
+      <label for="measure" class="form-label">Choose a Measure</label>
       <select v-model="selectedMeasure" class="form-select" id="measure" required>
         <option v-for="measure in measures" :key="measure" :value="measure">
           {{ measure }}
@@ -92,7 +130,7 @@ onMounted(() => {
       </select>
     </div>
     <div class="col-md-6">
-      <label for="category" class="form-label required-field">Choose a Category</label>
+      <label for="category" class="form-label">Choose a Category</label>
       <select v-model="selectedCategory" class="form-select" id="category" required>
         <option v-for="category in categories" :key="category" :value="category">
           {{ category }}
@@ -116,10 +154,10 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">
-      <BarChart :data=filteredData />
+      <BarChart :data=filteredData :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
-      <p>This will contain a summary of the measure and key findings specific to it.</p>
+      <Summary :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
       <Table :data=filteredData />

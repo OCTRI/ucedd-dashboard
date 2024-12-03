@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { computed, shallowRef, ref, watch } from 'vue';
+import { computed, shallowRef, PropType, ref, watch } from 'vue';
 import DisplayRow from '@/types/DisplayRow';
+import MeasureRow from '@/types/MeasureRow';
 import {
     Chart, TooltipItem, registerables
 } from 'chart.js';
 
 const barChart = ref<HTMLCanvasElement | null>(null);
 const chartInstance = shallowRef<Chart | null>(null);
+const ready = ref<boolean>(false);
 Chart.defaults.font.size = 16;
 Chart.defaults.font.family = "'Lato', 'Helvetica', 'Arial', sans-serif";
 
@@ -14,7 +16,19 @@ const props = defineProps({
     data: {
         type: Array<DisplayRow>,
         required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    summary: {
+        type: Object as PropType<MeasureRow>,
+        required: true
     }
+});
+
+const categoryFinding = computed(() => {
+    return props.summary[props.category.toLowerCase() as keyof MeasureRow];
 });
 
 const isRate = computed(() => {
@@ -26,6 +40,9 @@ const title = computed(() => {
 });
 
 const subtitle = computed(() => {
+    if (categoryFinding.value) {
+        return categoryFinding.value;
+    }
     return props.data.some((row) => 1 === row.p_significant) ? "Significant differences are denoted with an asterisk (*) and highlighted" : "Differences between IDD and non-IDD populations is not statistically significant.";
 });
 
@@ -142,6 +159,7 @@ const updateChart = () => {
 
 watch(() => props.data, (newData) => {
     if (newData.length > 0) {
+        ready.value = true;
         if (!chartInstance.value) {
             createChart();
         } else {
