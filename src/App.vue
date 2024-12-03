@@ -59,42 +59,42 @@ const selectedMeasureRow = computed(() => {
   return row[0];
 });
 
-const fetchCSVData = () => {
+const pathPrefix = () => {
   const location = window.location.href;
-  const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
-  fetch(prefix + "/data.csv")
-    .then((response) => response.text())
-    .then((csvText) => {
-      Papa.parse<DataRow>(csvText, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          initialize(results);
-        },
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching the CSV file:", error);
+  return location.endsWith("/") ? location.slice(0, location.length - 1) : location;
+}
+
+const fetchCSVData = async () => {
+  try {
+    const response = await fetch(pathPrefix() + "/data.csv");
+    const csvText = await response.text();
+    Papa.parse<DataRow>(csvText, {
+      header: true,
+      dynamicTyping: true,
+      complete: (results) => {
+        initialize(results);
+      },
     });
+  } catch (error) {
+    console.error("Error fetching the CSV file:", error);
+  }
+
 };
 
-const fetchMeasureSummary = () => {
-  const location = window.location.href;
-  const prefix = location.endsWith("/") ? location.slice(0, location.length - 1) : location;
-  fetch(prefix + "/measures.csv")
-    .then((response) => response.text())
-    .then((csvText) => {
-      Papa.parse<MeasureRow>(csvText, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          measureRows.value = results.data;
-        },
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching the CSV file:", error);
+const fetchMeasureSummary = async () => {
+  try {
+    const response = await fetch(pathPrefix() + "/measures.csv");
+    const csvText = await response.text();
+    Papa.parse<MeasureRow>(csvText, {
+      header: true,
+      dynamicTyping: true,
+      complete: (results) => {
+        measureRows.value = results.data;
+      },
     });
+  } catch (error) {
+    console.error("Error fetching the CSV file:", error);
+  }
 };
 
 const initialize = (results: Papa.ParseResult<DataRow>) => {
