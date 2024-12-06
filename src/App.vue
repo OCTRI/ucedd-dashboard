@@ -49,11 +49,14 @@ const selectedMeasureRow = computed(() => {
     return {
       measure: selectedMeasure.value,
       description: "",
-      all: "",
-      age: "",
-      race: "",
-      residency: "",
-      sex: "",
+      chart_age: "",
+      chart_race_and_ethnicity: "",
+      chart_residency: "",
+      chart_sex: "",
+      summary_age: "",
+      summary_race_and_ethnicity: "",
+      summary_residency: "",
+      summary_sex: "",
     }
   }
   return row[0];

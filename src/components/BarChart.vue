@@ -8,7 +8,6 @@ import {
 
 const barChart = ref<HTMLCanvasElement | null>(null);
 const chartInstance = shallowRef<Chart | null>(null);
-const ready = ref<boolean>(false);
 Chart.defaults.font.size = 16;
 Chart.defaults.font.family = "'Lato', 'Helvetica', 'Arial', sans-serif";
 
@@ -27,10 +26,6 @@ const props = defineProps({
     }
 });
 
-const categoryFinding = computed(() => {
-    return props.summary[props.category.toLowerCase() as keyof MeasureRow];
-});
-
 const isRate = computed(() => {
     return props.data.some((row) => 1 === row.outcome_count);
 });
@@ -40,10 +35,9 @@ const title = computed(() => {
 });
 
 const subtitle = computed(() => {
-    if (categoryFinding.value) {
-        return categoryFinding.value;
-    }
-    return props.data.some((row) => 1 === row.p_significant) ? "Significant differences are denoted with an asterisk (*) and highlighted" : "Differences between IDD and non-IDD populations is not statistically significant.";
+    const measuresColumnName = "chart_" + props.category.toLowerCase().replace(/[\s]+/g, '_');
+    const chartText = props.summary[measuresColumnName as keyof MeasureRow];
+    return chartText;
 });
 
 // Adds background when stratification_category is significant
@@ -116,7 +110,7 @@ const getChartOptions = () => {
                 text: title.value
             },
             subtitle: {
-                display: true,
+                display: subtitle.value !== null,
                 text: subtitle.value,
                 font: {
                     size: 14
@@ -159,7 +153,6 @@ const updateChart = () => {
 
 watch(() => props.data, (newData) => {
     if (newData.length > 0) {
-        ready.value = true;
         if (!chartInstance.value) {
             createChart();
         } else {
