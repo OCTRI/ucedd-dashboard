@@ -157,10 +157,10 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">
-      <BarChart :data=filteredData :category=selectedCategory :summary={...selectedMeasureRow} />
+      <BarChart :data=filteredData :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
-      <Summary :category=selectedCategory :summary={...selectedMeasureRow} />
+      <Summary :category=selectedCategory :summary=selectedMeasureRow />
     </div>
     <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
       <Table :data=filteredData />
