@@ -19,7 +19,7 @@ const description = computed(() => {
 
 const summaryText = computed(() => {
     const measuresColumnName = "summary_" + props.category.toLowerCase().replace(/[\s]+/g, '_');
-     return props.summary[measuresColumnName as keyof MeasureRow];
+    return props.summary[measuresColumnName as keyof MeasureRow];
 });
 
 const hasSummaryText = computed(() => {
