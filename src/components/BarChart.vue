@@ -75,7 +75,7 @@ const getChartOptions = () => {
             },
             tooltip: {
                 callbacks: {
-                    label: function (tooltipItem: TooltipItem<'bar'>) {
+                    label(tooltipItem: TooltipItem<'bar'>) {
                         return tooltipItem.dataset.label + ': ' + tooltipItem.raw;
                     },
                 },
@@ -99,7 +99,7 @@ const getChartOptions = () => {
                     display: true,
                     text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
                 },
-                afterBuildTicks: function(axis: Scale) {
+                afterBuildTicks(axis: Scale) {
                     axis.ticks = [axis.ticks[0], axis.ticks[axis.ticks.length-1]];
                     return axis;
                 },
