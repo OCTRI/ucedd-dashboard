@@ -68,7 +68,7 @@ const getChartOptions = () => {
     return {
         responsive: true,
         maintainAspectRatio: false,
-        indexAxis: 'y',
+        indexAxis: 'y' as 'y', 
         plugins: {
             legend: {
                 position: 'top' as 'top',
@@ -95,14 +95,13 @@ const getChartOptions = () => {
         scales: {
             x: {
                 beginAtZero: true,
-                position: 'top',
                 title: {
                     display: true,
                     text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
                 },
                 grid: {
                     display: false
-                }
+                },
             },
             y: {
                 stacked: false,
