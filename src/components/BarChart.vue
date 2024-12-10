@@ -41,6 +41,7 @@ const subtitle = computed(() => {
 });
 
 // Adds background when stratification_category is significant
+/*
 const dynamicHighlightPlugin = {
     id: 'dynamicHighlight',
     beforeDatasetsDraw: (chart: Chart) => {
@@ -67,6 +68,8 @@ const dynamicHighlightPlugin = {
     },
 };
 Chart.register(...registerables, dynamicHighlightPlugin);
+*/
+Chart.register(...registerables);
 
 const getChartData = () => {
     // Reformats the filtered data into the shape needed by chartjs
@@ -94,6 +97,7 @@ const getChartOptions = () => {
     return {
         responsive: true,
         maintainAspectRatio: false,
+        indexAxis: 'y',
         plugins: {
             legend: {
                 position: 'top' as 'top',
@@ -119,14 +123,14 @@ const getChartOptions = () => {
         },
         scales: {
             x: {
-                stacked: false,
-            },
-            y: {
                 beginAtZero: true,
                 title: {
                     display: true,
                     text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
                 },
+            },
+            y: {
+                stacked: false,
             },
         },
     };
