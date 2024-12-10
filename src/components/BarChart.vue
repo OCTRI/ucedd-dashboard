@@ -3,7 +3,7 @@ import { computed, shallowRef, PropType, ref, watch } from 'vue';
 import DisplayRow from '@/types/DisplayRow';
 import MeasureRow from '@/types/MeasureRow';
 import {
-    Chart, TooltipItem, registerables
+    Chart, Scale, TooltipItem, registerables
 } from 'chart.js';
 
 const barChart = ref<HTMLCanvasElement | null>(null);
@@ -99,9 +99,13 @@ const getChartOptions = () => {
                     display: true,
                     text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
                 },
+                afterBuildTicks: function(axis: Scale) {
+                    axis.ticks = [axis.ticks[0], axis.ticks[axis.ticks.length-1]];
+                    return axis;
+                },
                 grid: {
                     display: false
-                },
+                }
             },
             y: {
                 stacked: false,
