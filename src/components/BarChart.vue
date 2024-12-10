@@ -40,35 +40,6 @@ const subtitle = computed(() => {
     return chartText;
 });
 
-// Adds background when stratification_category is significant
-/*
-const dynamicHighlightPlugin = {
-    id: 'dynamicHighlight',
-    beforeDatasetsDraw: (chart: Chart) => {
-        const { ctx, chartArea, scales } = chart;
-        const { top, bottom } = chartArea;
-        const xAxis = scales.x;
-        const groups = props.data.filter((row) => 1 === row.p_significant).map((row) => row.stratification_display);
-        ctx.save();
-        ctx.fillStyle = 'rgba(200, 200, 200, 0.3)';
-
-        const labels = chart?.data?.labels;
-        if (labels) {
-            groups.forEach((groupLabel) => {
-                const groupIndex = labels.indexOf(groupLabel);
-                const groupWidth = (xAxis.getPixelForTick(1) - xAxis.getPixelForTick(0));
-                if (groupIndex !== -1) {
-                    const barStart = xAxis.getPixelForTick(groupIndex) - groupWidth / 2;
-                    ctx.fillRect(barStart, top, groupWidth, bottom - top);
-                }
-            });
-        }
-
-        ctx.restore();
-    },
-};
-Chart.register(...registerables, dynamicHighlightPlugin);
-*/
 Chart.register(...registerables);
 
 const getChartData = () => {
@@ -124,13 +95,20 @@ const getChartOptions = () => {
         scales: {
             x: {
                 beginAtZero: true,
+                position: 'top',
                 title: {
                     display: true,
                     text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
                 },
+                grid: {
+                    display: false
+                }
             },
             y: {
                 stacked: false,
+                grid: {
+                    display: false
+                }
             },
         },
     };
