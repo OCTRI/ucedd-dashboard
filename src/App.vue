@@ -13,6 +13,7 @@ const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>("");
 const selectedCategory = ref<string>("");
 const measureRows = ref<Array<MeasureRow>>([]);
+const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
@@ -86,7 +87,13 @@ const fetchCSVData = async () => {
 
 const fetchMeasureSummary = async () => {
   try {
-    const response = await fetch(pathPrefix() + "/measures.csv");
+    let response;
+    // For development, the study team will edit this Google document
+    if (apiKey !== undefined && apiKey !== null) {
+      response = await fetch("https://docs.google.com/spreadsheets/d/1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4/export?gid=0&format=csv&id=1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4&key=" + apiKey);
+    } else {
+      response = await fetch(pathPrefix() + "/measures.csv");
+    }
     const csvText = await response.text();
     Papa.parse<MeasureRow>(csvText, {
       header: true,
