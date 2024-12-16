@@ -151,6 +151,10 @@ onMounted(() => {
         type="button" role="tab" aria-controls="pills-summary" aria-selected="false">Summary</button>
     </li>
     <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-terms-tab" data-bs-toggle="pill" data-bs-target="#pills-terms"
+        type="button" role="tab" aria-controls="pills-terms" aria-selected="false">Terms</button>
+    </li>
+    <li class="nav-item" role="presentation">
       <button class="nav-link" id="pills-data-tab" data-bs-toggle="pill" data-bs-target="#pills-data" type="button"
         role="tab" aria-controls="pills-data" aria-selected="false">Data</button>
     </li>
@@ -161,6 +165,9 @@ onMounted(() => {
     </div>
     <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
       <Summary :category=selectedCategory :summary=selectedMeasureRow />
+    </div>
+    <div class="tab-pane fade" id="pills-terms" role="tabpanel" aria-labelledby="pills-terms-tab">
+      <p>This will contain terms relevant to the selection. e.g., SUD (Substance Use Disorder)</p>
     </div>
     <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
       <Table :data=filteredData />
