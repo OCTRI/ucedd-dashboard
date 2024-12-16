@@ -44,7 +44,7 @@ Chart.register(...registerables);
 
 const getChartData = () => {
     // Reformats the filtered data into the shape needed by chartjs
-    const labels = props.data.map((row) => row.stratification_display);
+    const labels = props.data.map((row) => row.stratification);
     const idd_data = props.data.map((row) => Number(row.idd_estimate_numeric));
     const non_idd_data = props.data.map((row) => Number(row.non_idd_estimate_numeric));
     return {
@@ -97,7 +97,7 @@ const getChartOptions = () => {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: isRate.value ? "Mean (per 1000 member years)" : "Percent",
+                    text: isRate.value ? "Mean" : "Percent",
                 },
                 afterBuildTicks(axis: Scale) {
                     axis.ticks = [axis.ticks[0], axis.ticks[axis.ticks.length-1]];
