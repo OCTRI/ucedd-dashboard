@@ -37,9 +37,6 @@ spec:
         ports:
         - containerPort: 9117
           name: apache-exporter
-        envFrom:
-        - secretRef:
-            name: ucedd-dev
         command:
         - /usr/bin/prometheus-apache-exporter
         - --scrape_uri="http://localhost/_stats?auto"

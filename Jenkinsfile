@@ -8,6 +8,7 @@ pipeline {
   environment {
     DEFAULT_BRANCH = 'main'
     DEPLOYMENT_FILE = 'k8s/dev/'
+    VITE_GOOGLE_API_KEY = credentials('ucedd-google-api-key')
   }
   tools {
     nodejs 'Node 22 LTS'
