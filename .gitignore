@@ -26,3 +26,5 @@ dist-ssr
 # build output
 /dist/
 /ucedd-dashboard/
+
+.env
