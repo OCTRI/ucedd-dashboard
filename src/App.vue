@@ -89,7 +89,7 @@ const fetchMeasureSummary = async () => {
   try {
     let response;
     // For development, the study team will edit this Google document
-    if (apiKey !== undefined && apiKey !== null) {
+    if (apiKey) {
       response = await fetch("https://docs.google.com/spreadsheets/d/1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4/export?gid=0&format=csv&id=1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4&key=" + apiKey);
     } else {
       response = await fetch(pathPrefix() + "/measures.csv");
