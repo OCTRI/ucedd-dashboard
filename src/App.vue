@@ -69,33 +69,33 @@ const pathPrefix = () => {
 }
 
 const fetchCSVData = async () => {
+  const response = await fetch(pathPrefix() + "/data.csv");
+  return await response.text();
+};
+
+const fetchMeasureSummary = async () => {
+  let response;
+  // For development, the study team will edit this Google document
+  if (apiKey) {
+    response = await fetch("https://docs.google.com/spreadsheets/d/1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4/export?gid=0&format=csv&id=1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4&key=" + apiKey);
+  } else {
+    response = await fetch(pathPrefix() + "/measures.csv");
+  }
+  return await response.text();
+};
+
+const fetchData = async () => {
   try {
-    const response = await fetch(pathPrefix() + "/data.csv");
-    const csvText = await response.text();
-    Papa.parse<DataRow>(csvText, {
+    const [data, summary] = await Promise.all([fetchCSVData(), fetchMeasureSummary()]);
+    Papa.parse<DataRow>(data, {
       header: true,
       dynamicTyping: true,
       complete: (results) => {
         initialize(results);
       },
     });
-  } catch (error) {
-    console.error("Error fetching the CSV file:", error);
-  }
 
-};
-
-const fetchMeasureSummary = async () => {
-  try {
-    let response;
-    // For development, the study team will edit this Google document
-    if (apiKey) {
-      response = await fetch("https://docs.google.com/spreadsheets/d/1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4/export?gid=0&format=csv&id=1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4&key=" + apiKey);
-    } else {
-      response = await fetch(pathPrefix() + "/measures.csv");
-    }
-    const csvText = await response.text();
-    Papa.parse<MeasureRow>(csvText, {
+    Papa.parse<MeasureRow>(summary, {
       header: true,
       dynamicTyping: true,
       complete: (results) => {
@@ -103,9 +103,9 @@ const fetchMeasureSummary = async () => {
       },
     });
   } catch (error) {
-    console.error("Error fetching the CSV file:", error);
+    console.error("Error fetching one of the CSV files:", error);
   }
-};
+}
 
 const initialize = (results: Papa.ParseResult<DataRow>) => {
   // Add an asterisk to significant results
@@ -122,8 +122,7 @@ const initialize = (results: Papa.ParseResult<DataRow>) => {
 onMounted(() => {
   const tabs = document.querySelectorAll('#pills-tab button');
   tabs.forEach(el => new Tab(el));
-  fetchCSVData();
-  fetchMeasureSummary();
+  fetchData();
 });
 
 
