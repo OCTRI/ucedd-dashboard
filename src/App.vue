@@ -174,5 +174,5 @@ onMounted(() => {
     <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab">
       <Table :data=filteredData />
     </div>
-  </div>        
+  </div>
 </template>
