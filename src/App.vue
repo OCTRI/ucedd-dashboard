@@ -147,35 +147,31 @@ onMounted(() => {
       </select>
     </div>
   </div>
-  <ul class="nav nav-pills my-4" id="pills-tab" role="tablist">
+  <ul class="nav nav-tabs" id="dashboardTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="pills-chart-tab" data-bs-toggle="pill" data-bs-target="#pills-chart"
-        type="button" role="tab" aria-controls="pills-chart" aria-selected="true">Chart</button>
+      <button class="nav-link active" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart-tab-pane" type="button" role="tab" aria-controls="chart-tab-pane" aria-selected="true">Chart</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-summary-tab" data-bs-toggle="pill" data-bs-target="#pills-summary"
-        type="button" role="tab" aria-controls="pills-summary" aria-selected="false">Summary</button>
+      <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary-tab-pane" type="button" role="tab" aria-controls="summary-tab-pane" aria-selected="false">Summary</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-terms-tab" data-bs-toggle="pill" data-bs-target="#pills-terms"
-        type="button" role="tab" aria-controls="pills-terms" aria-selected="false">Terms</button>
+      <button class="nav-link" id="terms-tab" data-bs-toggle="tab" data-bs-target="#terms-tab-pane" type="button" role="tab" aria-controls="terms-tab-pane" aria-selected="false">Terms</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-data-tab" data-bs-toggle="pill" data-bs-target="#pills-data" type="button"
-        role="tab" aria-controls="pills-data" aria-selected="false">Data</button>
+      <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false">Data</button>
     </li>
   </ul>
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">
-      <BarChart :data=filteredData :category=selectedCategory :summary=selectedMeasureRow />
+  <div class="tab-content" id="dashboardTabContent">
+    <div class="tab-pane fade show active" id="chart-tab-pane" role="tabpanel" aria-labelledby="chart-tab">
+      <BarChart :data=filteredData :category=selectedCategory :summary={...selectedMeasureRow} />
     </div>
-    <div class="tab-pane fade" id="pills-summary" role="tabpanel" aria-labelledby="pills-summary-tab">
-      <Summary :category=selectedCategory :summary=selectedMeasureRow />
+    <div class="tab-pane fade" id="summary-tab-pane" role="tabpanel" aria-labelledby="summary-tab">
+      <Summary :category=selectedCategory :summary={...selectedMeasureRow} />
     </div>
-    <div class="tab-pane fade" id="pills-terms" role="tabpanel" aria-labelledby="pills-terms-tab">
-      <p>This will contain terms relevant to the selection. e.g., SUD (Substance Use Disorder)</p>
+    <div class="tab-pane fade" id="terms-tab-pane" role="tabpanel" aria-labelledby="terms-tab">
+      <p>Placeholder for terms specific to the selection (e.g., Substance Use Disorder)</p>
     </div>
-    <div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
+    <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab">
       <Table :data=filteredData />
     </div>
   </div>
