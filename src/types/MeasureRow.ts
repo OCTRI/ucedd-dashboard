@@ -5,8 +5,8 @@ export default interface MeasureRow {
     chart_race_and_ethnicity: string;
     chart_residency: string;
     chart_sex: string;
-    summary_age: string;
-    summary_race_and_ethnicity: string;
-    summary_residency: string;
-    summary_sex: string;
+    description_age: string;
+    description_race_and_ethnicity: string;
+    description_residency: string;
+    description_sex: string;
 }
