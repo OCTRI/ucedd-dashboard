@@ -20,7 +20,7 @@ const props = defineProps({
         type: String,
         required: true
     },
-    summary: {
+    description: {
         type: Object as PropType<MeasureRow>,
         required: true
     }
@@ -36,7 +36,7 @@ const title = computed(() => {
 
 const subtitle = computed(() => {
     const measuresColumnName = "chart_" + props.category.toLowerCase().replace(/[\s]+/g, '_');
-    const chartText = props.summary[measuresColumnName as keyof MeasureRow];
+    const chartText = props.description[measuresColumnName as keyof MeasureRow];
     return chartText;
 });
 

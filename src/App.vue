@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import BarChart from '@/components/BarChart.vue';
-import Summary from '@/components/Summary.vue';
+import Description from '@/components/Description.vue';
 import Table from '@/components/Table.vue';
 import Papa from 'papaparse';
 import Tab from 'bootstrap/js/dist/tab';
@@ -54,10 +54,10 @@ const selectedMeasureRow = computed(() => {
       chart_race_and_ethnicity: "",
       chart_residency: "",
       chart_sex: "",
-      summary_age: "",
-      summary_race_and_ethnicity: "",
-      summary_residency: "",
-      summary_sex: "",
+      description_age: "",
+      description_race_and_ethnicity: "",
+      description_residency: "",
+      description_sex: "",
     }
   }
   return row[0];
@@ -73,7 +73,7 @@ const fetchCSVData = async () => {
   return await response.text();
 };
 
-const fetchMeasureSummary = async () => {
+const fetchMeasureDescription = async () => {
   let response;
   // For development, the study team will edit this Google document
   if (apiKey) {
@@ -86,7 +86,7 @@ const fetchMeasureSummary = async () => {
 
 const fetchData = async () => {
   try {
-    const [data, summary] = await Promise.all([fetchCSVData(), fetchMeasureSummary()]);
+    const [data, description] = await Promise.all([fetchCSVData(), fetchMeasureDescription()]);
     Papa.parse<DataRow>(data, {
       header: true,
       dynamicTyping: true,
@@ -95,7 +95,7 @@ const fetchData = async () => {
       },
     });
 
-    Papa.parse<MeasureRow>(summary, {
+    Papa.parse<MeasureRow>(description, {
       header: true,
       dynamicTyping: true,
       complete: (results) => {
@@ -152,10 +152,7 @@ onMounted(() => {
       <button class="nav-link active" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart-tab-pane" type="button" role="tab" aria-controls="chart-tab-pane" aria-selected="true">Chart</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary-tab-pane" type="button" role="tab" aria-controls="summary-tab-pane" aria-selected="false">Summary</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="terms-tab" data-bs-toggle="tab" data-bs-target="#terms-tab-pane" type="button" role="tab" aria-controls="terms-tab-pane" aria-selected="false">Terms</button>
+      <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-tab-pane" type="button" role="tab" aria-controls="description-tab-pane" aria-selected="false">Description</button>
     </li>
     <li class="nav-item" role="presentation">
       <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false">Data</button>
@@ -163,13 +160,10 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="dashboardTabContent">
     <div class="tab-pane fade show active" id="chart-tab-pane" role="tabpanel" aria-labelledby="chart-tab">
-      <BarChart :data=filteredData :category=selectedCategory :summary={...selectedMeasureRow} />
+      <BarChart :data=filteredData :category=selectedCategory :description={...selectedMeasureRow} />
     </div>
-    <div class="tab-pane fade" id="summary-tab-pane" role="tabpanel" aria-labelledby="summary-tab">
-      <Summary :category=selectedCategory :summary={...selectedMeasureRow} />
-    </div>
-    <div class="tab-pane fade" id="terms-tab-pane" role="tabpanel" aria-labelledby="terms-tab">
-      <p>Placeholder for terms specific to the selection (e.g., Substance Use Disorder)</p>
+    <div class="tab-pane fade" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab">
+      <Description :category=selectedCategory :description={...selectedMeasureRow} />
     </div>
     <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab">
       <Table :data=filteredData />
