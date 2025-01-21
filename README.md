@@ -1,6 +1,6 @@
 # UCEDD Dashboard
 
-This Vue application displays the 2022 summary data for Medicaid members provided by CHSE.
+This Vue application displays the 2022 summary data for Medicaid members provided by CHSE. The source data provided by CHSE was transformed using an R-script available [here](https://source.ohsu.edu/OCTRI-Apps/ucedd-data-transformation/tree/main).
 
 ## Dependencies
 

@@ -139,62 +139,62 @@ Diabetes Management (HbA1c),Rural recipients aged 18-64 years with a diagnosis o
 Diabetes Management (HbA1c),Urban recipients aged 18-64 years with a diagnosis of diabetes,Urban,228,92.6,NA,86.4,NA,6.2,0.221,0,0,NA,92.6,86.4,Residency
 Diabetes Management (HbA1c),Female recipients aged 18-64 years with a diagnosis of diabetes,Female,146,88.6,NA,82.9,NA,5.7,0.524,0,0,NA,88.6,82.9,Sex
 Diabetes Management (HbA1c),Males aged 18-64 years with a diagnosis of diabetes,Male,145,94,NA,86.7,NA,7.3,0.247,0,0,NA,94,86.7,Sex
-ED Utilization,Recipients aged 18-29 years,Ages 18-29,2192,1208.0,(3827.2),542.0,(1500.7),666.1,<0.001,1,1,0,1208.0 (3827.2),542.0 (1500.7),Age
-ED Utilization,Recipients aged 30-39 years,Ages 30-39,1010,2091.1,(10591.0),705.0,(1956.4),1386.1,0.004,1,1,0,2091.1 (10591.0),705.0 (1956.4),Age
-ED Utilization,Recipients aged 40-49 years,Ages 40-49,468,2017.1,(5729.2),594.0,(1374.9),1423.1,<0.001,1,1,0,2017.1 (5729.2),594.0 (1374.9),Age
-ED Utilization,Recipients aged 50-64 years,Ages 50-64,462,1697.0,(3572.1),761.9,(1438.5),935.1,<0.001,1,1,0,1697.0 (3572.1),761.9 (1438.5),Age
-ED Utilization,Recipients aged 18-64 years,All,4132,1570.2,(6358.4),612.3,(1606.0),957.9,<0.001,1,1,0,1570.2 (6358.4),612.3 (1606.0),All
-ED Utilization,Black/African American recipients aged 18-64 years,Black/African American,224,1866.1,(3879.9),937.5,(1871.0),928.6,0.024,1,1,0,1866.1 (3879.9),937.5 (1871.0),Race and Ethnicity
-ED Utilization,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,1431.5,(4842.8),411.3,(1148.9),1020.2,0.001,1,1,0,1431.5 (4842.8),411.3 (1148.9),Race and Ethnicity
-ED Utilization,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,1655.2,(5482.1),590.5,(1579.2),1064.7,0.005,1,1,0,1655.2 (5482.1),590.5 (1579.2),Race and Ethnicity
-ED Utilization,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,1253.6,(4445.3),503.6,(1126.5),750,0.007,1,1,0,1253.6 (4445.3),503.6 (1126.5),Race and Ethnicity
-ED Utilization,White recipients aged 18-64 years,White,2396,1627.7,(7289.1),652.8,(1748.5),975,<0.001,1,1,0,1627.7 (7289.1),652.8 (1748.5),Race and Ethnicity
-ED Utilization,Rural recipients aged 18-64 years,Rural,880,1136.4,(3479.8),586.4,(1291.9),550,0.002,1,1,0,1136.4 (3479.8),586.4 (1291.9),Residency
-ED Utilization,Urban recipients aged 18-64 years,Urban,3252,1687.6,(6931.1),619.3,(1681.3),1068.3,<0.001,1,1,0,1687.6 (6931.1),619.3 (1681.3),Residency
-ED Utilization,Female recipients aged 18-64 years,Female,1888,1727.8,(5067.8),682.2,(1660.0),1045.6,<0.001,1,1,0,1727.8 (5067.8),682.2 (1660.0),Sex
-ED Utilization,Males aged 18-64 years,Male,2244,1437.6,(7268.5),553.5,(1557.5),884.1,<0.001,1,1,0,1437.6 (7268.5),553.5 (1557.5),Sex
-ED Visits for Suicidal Ideation,Recipients aged 18-29 years,Ages 18-29,2192,3.6,(60.3),0.9,(30.2),2.7,0.179,1,0,NA,3.6 (60.3),0.9 (30.2),Age
-ED Visits for Suicidal Ideation,Recipients aged 30-39 years,Ages 30-39,1010,29.7,(585.1),0.0,(0.0),29.7,0.255,1,0,NA,29.7 (585.1),0.0 (0.0),Age
-ED Visits for Suicidal Ideation,Recipients aged 40-49 years,Ages 40-49,468,4.3,(65.4),0.0,(0.0),4.3,0.318,1,0,NA,4.3 (65.4),0.0 (0.0),Age
-ED Visits for Suicidal Ideation,Recipients aged 50-64 years,Ages 50-64,462,26.0,(245.3),0.0,(0.0),26,0.109,1,0,NA,26.0 (245.3),0.0 (0.0),Age
-ED Visits for Suicidal Ideation,Recipients aged 18-64 years,All,4132,12.6,(304.7),0.5,(22.0),12.1,0.072,1,0,NA,12.6 (304.7),0.5 (22.0),All
-ED Visits for Suicidal Ideation,Black/African American recipients aged 18-64 years,Black/African American,224,8.9,(94.5),0.0,(0.0),8.9,0.319,1,0,NA,8.9 (94.5),0.0 (0.0),Race and Ethnicity
-ED Visits for Suicidal Ideation,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,0.0,(0.0),0.0,(0.0),0,NA,1,NA,NA,0.0 (0.0),0.0 (0.0),Race and Ethnicity
-ED Visits for Suicidal Ideation,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,0.0,(0.0),0.0,(0.0),0,NA,1,NA,NA,0.0 (0.0),0.0 (0.0),Race and Ethnicity
-ED Visits for Suicidal Ideation,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.1,(782.5),0.0,(0.0),47.1,0.318,1,0,NA,47.1 (782.5),0.0 (0.0),Race and Ethnicity
-ED Visits for Suicidal Ideation,White recipients aged 18-64 years,White,2396,10.0,(135.2),0.8,(28.9),9.2,0.022,1,1,0,10.0 (135.2),0.8 (28.9),Race and Ethnicity
-ED Visits for Suicidal Ideation,Rural recipients aged 18-64 years,Rural,880,11.4,(157.9),0.0,(0.0),11.4,0.132,1,0,NA,11.4 (157.9),0.0 (0.0),Residency
-ED Visits for Suicidal Ideation,Urban recipients aged 18-64 years,Urban,3252,12.9,(333.5),0.6,(24.8),12.3,0.138,1,0,NA,12.9 (333.5),0.6 (24.8),Residency
-ED Visits for Suicidal Ideation,Female recipients aged 18-64 years,Female,1888,13.8,(155.6),0.0,(0.0),13.8,0.007,1,1,0,13.8 (155.6),0.0 (0.0),Sex
-ED Visits for Suicidal Ideation,Males aged 18-64 years,Male,2244,11.6,(388.1),0.9,(29.9),10.7,0.358,1,0,NA,11.6 (388.1),0.9 (29.9),Sex
-Engagement of SUD Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,10.2,NA,24.7,NA,-14.5,0.055,0,0,NA,10.2,24.7,Age
-Engagement of SUD Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,12.8,NA,19.2,NA,-6.4,0.596,0,0,NA,12.8,19.2,Age
-Engagement of SUD Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
-Engagement of SUD Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
-Engagement of SUD Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,15.3,NA,19.9,NA,-4.6,0.379,0,0,NA,15.3,19.9,All
-Engagement of SUD Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Engagement of SUD Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Engagement of SUD Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Engagement of SUD Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Engagement of SUD Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,11.2,NA,19,NA,-7.8,0.215,0,0,NA,11.2,19,Race and Ethnicity
-Engagement of SUD Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,17.6,NA,9.7,NA,7.9,0.569,0,0,NA,17.6,9.7,Residency
-Engagement of SUD Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,14.6,NA,22.2,NA,-7.6,0.184,0,0,NA,14.6,22.2,Residency
-Engagement of SUD Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,22.7,NA,10.7,NA,12,0.131,0,0,NA,22.7,10.7,Sex
-Engagement of SUD Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,8.5,NA,24.5,NA,-16,0.011,0,1,0,8.5,24.5,Sex
-Initiation of SUD Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,35.6,NA,34.2,NA,1.4,1.000,0,0,NA,35.6,34.2,Age
-Initiation of SUD Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,23.1,NA,30.8,NA,-7.7,0.564,0,0,NA,23.1,30.8,Age
-Initiation of SUD Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
-Initiation of SUD Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
-Initiation of SUD Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,33.6,NA,32.5,NA,1.1,0.944,0,0,NA,33.6,32.5,All
-Initiation of SUD Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Initiation of SUD Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Initiation of SUD Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Initiation of SUD Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
-Initiation of SUD Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,33.8,NA,32.4,NA,1.4,0.969,0,0,NA,33.8,32.4,Race and Ethnicity
-Initiation of SUD Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,29.4,NA,22.6,NA,6.8,0.731,0,0,NA,29.4,22.6,Residency
-Initiation of SUD Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,35,NA,34.8,NA,0.2,1.000,0,0,NA,35,34.8,Residency
-Initiation of SUD Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,40.9,NA,17.9,NA,23,0.010,0,1,1,40.9,17.9,Sex
-Initiation of SUD Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,26.8,NA,40,NA,-13.2,0.096,0,0,NA,26.8,40,Sex
+Emergency Department Utilization,Recipients aged 18-29 years,Ages 18-29,2192,1208.0,(3827.2),542.0,(1500.7),666.1,<0.001,1,1,0,1208.0 (3827.2),542.0 (1500.7),Age
+Emergency Department Utilization,Recipients aged 30-39 years,Ages 30-39,1010,2091.1,(10591.0),705.0,(1956.4),1386.1,0.004,1,1,0,2091.1 (10591.0),705.0 (1956.4),Age
+Emergency Department Utilization,Recipients aged 40-49 years,Ages 40-49,468,2017.1,(5729.2),594.0,(1374.9),1423.1,<0.001,1,1,0,2017.1 (5729.2),594.0 (1374.9),Age
+Emergency Department Utilization,Recipients aged 50-64 years,Ages 50-64,462,1697.0,(3572.1),761.9,(1438.5),935.1,<0.001,1,1,0,1697.0 (3572.1),761.9 (1438.5),Age
+Emergency Department Utilization,Recipients aged 18-64 years,All,4132,1570.2,(6358.4),612.3,(1606.0),957.9,<0.001,1,1,0,1570.2 (6358.4),612.3 (1606.0),All
+Emergency Department Utilization,Black/African American recipients aged 18-64 years,Black/African American,224,1866.1,(3879.9),937.5,(1871.0),928.6,0.024,1,1,0,1866.1 (3879.9),937.5 (1871.0),Race and Ethnicity
+Emergency Department Utilization,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,1431.5,(4842.8),411.3,(1148.9),1020.2,0.001,1,1,0,1431.5 (4842.8),411.3 (1148.9),Race and Ethnicity
+Emergency Department Utilization,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,1655.2,(5482.1),590.5,(1579.2),1064.7,0.005,1,1,0,1655.2 (5482.1),590.5 (1579.2),Race and Ethnicity
+Emergency Department Utilization,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,1253.6,(4445.3),503.6,(1126.5),750,0.007,1,1,0,1253.6 (4445.3),503.6 (1126.5),Race and Ethnicity
+Emergency Department Utilization,White recipients aged 18-64 years,White,2396,1627.7,(7289.1),652.8,(1748.5),975,<0.001,1,1,0,1627.7 (7289.1),652.8 (1748.5),Race and Ethnicity
+Emergency Department Utilization,Rural recipients aged 18-64 years,Rural,880,1136.4,(3479.8),586.4,(1291.9),550,0.002,1,1,0,1136.4 (3479.8),586.4 (1291.9),Residency
+Emergency Department Utilization,Urban recipients aged 18-64 years,Urban,3252,1687.6,(6931.1),619.3,(1681.3),1068.3,<0.001,1,1,0,1687.6 (6931.1),619.3 (1681.3),Residency
+Emergency Department Utilization,Female recipients aged 18-64 years,Female,1888,1727.8,(5067.8),682.2,(1660.0),1045.6,<0.001,1,1,0,1727.8 (5067.8),682.2 (1660.0),Sex
+Emergency Department Utilization,Males aged 18-64 years,Male,2244,1437.6,(7268.5),553.5,(1557.5),884.1,<0.001,1,1,0,1437.6 (7268.5),553.5 (1557.5),Sex
+Emergency Department Visits for Suicidal Ideation,Recipients aged 18-29 years,Ages 18-29,2192,3.6,(60.3),0.9,(30.2),2.7,0.179,1,0,NA,3.6 (60.3),0.9 (30.2),Age
+Emergency Department Visits for Suicidal Ideation,Recipients aged 30-39 years,Ages 30-39,1010,29.7,(585.1),0.0,(0.0),29.7,0.255,1,0,NA,29.7 (585.1),0.0 (0.0),Age
+Emergency Department Visits for Suicidal Ideation,Recipients aged 40-49 years,Ages 40-49,468,4.3,(65.4),0.0,(0.0),4.3,0.318,1,0,NA,4.3 (65.4),0.0 (0.0),Age
+Emergency Department Visits for Suicidal Ideation,Recipients aged 50-64 years,Ages 50-64,462,26.0,(245.3),0.0,(0.0),26,0.109,1,0,NA,26.0 (245.3),0.0 (0.0),Age
+Emergency Department Visits for Suicidal Ideation,Recipients aged 18-64 years,All,4132,12.6,(304.7),0.5,(22.0),12.1,0.072,1,0,NA,12.6 (304.7),0.5 (22.0),All
+Emergency Department Visits for Suicidal Ideation,Black/African American recipients aged 18-64 years,Black/African American,224,8.9,(94.5),0.0,(0.0),8.9,0.319,1,0,NA,8.9 (94.5),0.0 (0.0),Race and Ethnicity
+Emergency Department Visits for Suicidal Ideation,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,0.0,(0.0),0.0,(0.0),0,NA,1,NA,NA,0.0 (0.0),0.0 (0.0),Race and Ethnicity
+Emergency Department Visits for Suicidal Ideation,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,0.0,(0.0),0.0,(0.0),0,NA,1,NA,NA,0.0 (0.0),0.0 (0.0),Race and Ethnicity
+Emergency Department Visits for Suicidal Ideation,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.1,(782.5),0.0,(0.0),47.1,0.318,1,0,NA,47.1 (782.5),0.0 (0.0),Race and Ethnicity
+Emergency Department Visits for Suicidal Ideation,White recipients aged 18-64 years,White,2396,10.0,(135.2),0.8,(28.9),9.2,0.022,1,1,0,10.0 (135.2),0.8 (28.9),Race and Ethnicity
+Emergency Department Visits for Suicidal Ideation,Rural recipients aged 18-64 years,Rural,880,11.4,(157.9),0.0,(0.0),11.4,0.132,1,0,NA,11.4 (157.9),0.0 (0.0),Residency
+Emergency Department Visits for Suicidal Ideation,Urban recipients aged 18-64 years,Urban,3252,12.9,(333.5),0.6,(24.8),12.3,0.138,1,0,NA,12.9 (333.5),0.6 (24.8),Residency
+Emergency Department Visits for Suicidal Ideation,Female recipients aged 18-64 years,Female,1888,13.8,(155.6),0.0,(0.0),13.8,0.007,1,1,0,13.8 (155.6),0.0 (0.0),Sex
+Emergency Department Visits for Suicidal Ideation,Males aged 18-64 years,Male,2244,11.6,(388.1),0.9,(29.9),10.7,0.358,1,0,NA,11.6 (388.1),0.9 (29.9),Sex
+Engagement of Substance Use Disorder Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,10.2,NA,24.7,NA,-14.5,0.055,0,0,NA,10.2,24.7,Age
+Engagement of Substance Use Disorder Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,12.8,NA,19.2,NA,-6.4,0.596,0,0,NA,12.8,19.2,Age
+Engagement of Substance Use Disorder Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Engagement of Substance Use Disorder Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Engagement of Substance Use Disorder Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,15.3,NA,19.9,NA,-4.6,0.379,0,0,NA,15.3,19.9,All
+Engagement of Substance Use Disorder Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Engagement of Substance Use Disorder Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Engagement of Substance Use Disorder Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Engagement of Substance Use Disorder Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Engagement of Substance Use Disorder Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,11.2,NA,19,NA,-7.8,0.215,0,0,NA,11.2,19,Race and Ethnicity
+Engagement of Substance Use Disorder Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,17.6,NA,9.7,NA,7.9,0.569,0,0,NA,17.6,9.7,Residency
+Engagement of Substance Use Disorder Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,14.6,NA,22.2,NA,-7.6,0.184,0,0,NA,14.6,22.2,Residency
+Engagement of Substance Use Disorder Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,22.7,NA,10.7,NA,12,0.131,0,0,NA,22.7,10.7,Sex
+Engagement of Substance Use Disorder Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,8.5,NA,24.5,NA,-16,0.011,0,1,0,8.5,24.5,Sex
+Initiation of Substance Use Disorder Treatment,Recipients aged 18-29 years with new episode of alcohol or other drug dependence,Ages 18-29,132,35.6,NA,34.2,NA,1.4,1.000,0,0,NA,35.6,34.2,Age
+Initiation of Substance Use Disorder Treatment,Recipients aged 30-39 years with new episode of alcohol or other drug dependence,Ages 30-39,91,23.1,NA,30.8,NA,-7.7,0.564,0,0,NA,23.1,30.8,Age
+Initiation of Substance Use Disorder Treatment,Recipients aged 40-49 years with new episode of alcohol or other drug dependence,Ages 40-49,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Initiation of Substance Use Disorder Treatment,Recipients aged 50-64 years with new episode of alcohol or other drug dependence,Ages 50-64,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Age
+Initiation of Substance Use Disorder Treatment,Recipients aged 18-64 years with new episode of alcohol or other drug dependence,All,303,33.6,NA,32.5,NA,1.1,0.944,0,0,NA,33.6,32.5,All
+Initiation of Substance Use Disorder Treatment,Black/African American recipients aged 18-64 years with new episode of alcohol or other drug dependence,Black/African American,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Initiation of Substance Use Disorder Treatment,Latino/a/x recipients aged 18-64 years with new episode of alcohol or other drug dependence,Latino/a/x,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Initiation of Substance Use Disorder Treatment,Other/Multiple Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Other/Multiple Races,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Initiation of Substance Use Disorder Treatment,Unknown/Missing/Decline Race recipients aged 18-64 years with new episode of alcohol or other drug dependence,Unknown/Missing/Decline,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Race and Ethnicity
+Initiation of Substance Use Disorder Treatment,White recipients aged 18-64 years with new episode of alcohol or other drug dependence,White,185,33.8,NA,32.4,NA,1.4,0.969,0,0,NA,33.8,32.4,Race and Ethnicity
+Initiation of Substance Use Disorder Treatment,Rural recipients aged 18-64 years with new episode of alcohol or other drug dependence,Rural,65,29.4,NA,22.6,NA,6.8,0.731,0,0,NA,29.4,22.6,Residency
+Initiation of Substance Use Disorder Treatment,Urban recipients aged 18-64 years with new episode of alcohol or other drug dependence,Urban,238,35,NA,34.8,NA,0.2,1.000,0,0,NA,35,34.8,Residency
+Initiation of Substance Use Disorder Treatment,Female recipients aged 18-64 years with new episode of alcohol or other drug dependence,Female,122,40.9,NA,17.9,NA,23,0.010,0,1,1,40.9,17.9,Sex
+Initiation of Substance Use Disorder Treatment,Males aged 18-64 years with new episode of alcohol or other drug dependence,Male,181,26.8,NA,40,NA,-13.2,0.096,0,0,NA,26.8,40,Sex
 Nonfatal Suicide Attempts and Self-Harm,Recipients aged 18-29 years,Ages 18-29,2192,2.6,NA,0.5,NA,2.1,<0.001,0,1,0,2.6,0.5,Age
 Nonfatal Suicide Attempts and Self-Harm,Recipients aged 30-39 years,Ages 30-39,1010,1.4,NA,0.6,NA,0.8,0.340,0,0,NA,1.4,0.6,Age
 Nonfatal Suicide Attempts and Self-Harm,Recipients aged 40-49 years,Ages 40-49,468,2.6,NA,0.4,NA,2.2,0.128,0,0,NA,2.6,0.4,Age
@@ -209,20 +209,20 @@ Nonfatal Suicide Attempts and Self-Harm,Rural recipients aged 18-64 years,Rural,
 Nonfatal Suicide Attempts and Self-Harm,Urban recipients aged 18-64 years,Urban,3252,2.1,NA,0.6,NA,1.5,<0.001,0,1,0,2.1,0.6,Residency
 Nonfatal Suicide Attempts and Self-Harm,Female recipients aged 18-64 years,Female,1888,3.5,NA,0.5,NA,3,<0.001,0,1,0,3.5,0.5,Sex
 Nonfatal Suicide Attempts and Self-Harm,Males aged 18-64 years,Male,2244,1.1,NA,0.4,NA,0.7,0.144,0,0,NA,1.1,0.4,Sex
-Preventive Dental Services,Recipients aged 18-29 years,Ages 18-29,2192,46.4,NA,20.9,NA,25.5,<0.001,0,1,1,46.4,20.9,Age
-Preventive Dental Services,Recipients aged 30-39 years,Ages 30-39,1010,45.1,NA,21.2,NA,23.9,<0.001,0,1,1,45.1,21.2,Age
-Preventive Dental Services,Recipients aged 40-49 years,Ages 40-49,468,42.3,NA,19.2,NA,23.1,<0.001,0,1,1,42.3,19.2,Age
-Preventive Dental Services,Recipients aged 50-64 years,Ages 50-64,462,32,NA,17.3,NA,14.7,<0.001,0,1,1,32,17.3,Age
-Preventive Dental Services,Recipients aged 18-64 years,All,4132,44,NA,20.4,NA,23.6,<0.001,0,1,1,44,20.4,All
-Preventive Dental Services,Black/African American recipients aged 18-64 years,Black/African American,224,50,NA,23.2,NA,26.8,<0.001,0,1,1,50,23.2,Race and Ethnicity
-Preventive Dental Services,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,46,NA,25.4,NA,20.6,<0.001,0,1,1,46,25.4,Race and Ethnicity
-Preventive Dental Services,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,42.2,NA,24.6,NA,17.6,<0.001,0,1,1,42.2,24.6,Race and Ethnicity
-Preventive Dental Services,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.5,NA,16.3,NA,31.2,<0.001,0,1,1,47.5,16.3,Race and Ethnicity
-Preventive Dental Services,White recipients aged 18-64 years,White,2396,42.7,NA,19.2,NA,23.5,<0.001,0,1,1,42.7,19.2,Race and Ethnicity
-Preventive Dental Services,Rural recipients aged 18-64 years,Rural,880,43.9,NA,19.8,NA,24.1,<0.001,0,1,1,43.9,19.8,Residency
-Preventive Dental Services,Urban recipients aged 18-64 years,Urban,3252,44.1,NA,20.5,NA,23.6,<0.001,0,1,1,44.1,20.5,Residency
-Preventive Dental Services,Female recipients aged 18-64 years,Female,1888,45.1,NA,25.2,NA,19.9,<0.001,0,1,1,45.1,25.2,Sex
-Preventive Dental Services,Males aged 18-64 years,Male,2244,43.1,NA,16.3,NA,26.8,<0.001,0,1,1,43.1,16.3,Sex
+Access to Preventive Dental Services,Recipients aged 18-29 years,Ages 18-29,2192,46.4,NA,20.9,NA,25.5,<0.001,0,1,1,46.4,20.9,Age
+Access to Preventive Dental Services,Recipients aged 30-39 years,Ages 30-39,1010,45.1,NA,21.2,NA,23.9,<0.001,0,1,1,45.1,21.2,Age
+Access to Preventive Dental Services,Recipients aged 40-49 years,Ages 40-49,468,42.3,NA,19.2,NA,23.1,<0.001,0,1,1,42.3,19.2,Age
+Access to Preventive Dental Services,Recipients aged 50-64 years,Ages 50-64,462,32,NA,17.3,NA,14.7,<0.001,0,1,1,32,17.3,Age
+Access to Preventive Dental Services,Recipients aged 18-64 years,All,4132,44,NA,20.4,NA,23.6,<0.001,0,1,1,44,20.4,All
+Access to Preventive Dental Services,Black/African American recipients aged 18-64 years,Black/African American,224,50,NA,23.2,NA,26.8,<0.001,0,1,1,50,23.2,Race and Ethnicity
+Access to Preventive Dental Services,Latino/a/x recipients aged 18-64 years,Latino/a/x,496,46,NA,25.4,NA,20.6,<0.001,0,1,1,46,25.4,Race and Ethnicity
+Access to Preventive Dental Services,Other/Multiple Race recipients aged 18-64 years,Other/Multiple Races,464,42.2,NA,24.6,NA,17.6,<0.001,0,1,1,42.2,24.6,Race and Ethnicity
+Access to Preventive Dental Services,Unknown/Missing/Decline Race recipients aged 18-64 years,Unknown/Missing/Decline,552,47.5,NA,16.3,NA,31.2,<0.001,0,1,1,47.5,16.3,Race and Ethnicity
+Access to Preventive Dental Services,White recipients aged 18-64 years,White,2396,42.7,NA,19.2,NA,23.5,<0.001,0,1,1,42.7,19.2,Race and Ethnicity
+Access to Preventive Dental Services,Rural recipients aged 18-64 years,Rural,880,43.9,NA,19.8,NA,24.1,<0.001,0,1,1,43.9,19.8,Residency
+Access to Preventive Dental Services,Urban recipients aged 18-64 years,Urban,3252,44.1,NA,20.5,NA,23.6,<0.001,0,1,1,44.1,20.5,Residency
+Access to Preventive Dental Services,Female recipients aged 18-64 years,Female,1888,45.1,NA,25.2,NA,19.9,<0.001,0,1,1,45.1,25.2,Sex
+Access to Preventive Dental Services,Males aged 18-64 years,Male,2244,43.1,NA,16.3,NA,26.8,<0.001,0,1,1,43.1,16.3,Sex
 Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 18-29 years with an outpatient visit during the measurement year,Ages 18-29,1858,9.4,NA,8.7,NA,0.7,0.690,0,0,NA,9.4,8.7,Age
 Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 30-39 years with an outpatient visit during the measurement year,Ages 30-39,856,9.9,NA,9.1,NA,0.8,0.782,0,0,NA,9.9,9.1,Age
 Screening for Alcohol or Other Substance Abuse Treatment,Recipients aged 40-49 years with an outpatient visit during the measurement year,Ages 40-49,408,7.9,NA,5.5,NA,2.4,0.449,0,0,NA,7.9,5.5,Age
