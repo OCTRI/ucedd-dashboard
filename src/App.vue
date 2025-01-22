@@ -17,12 +17,12 @@ const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
-  return Array.from(measureSet);
+  return Array.from(measureSet).sort();
 });
 
 const categories = computed(() => {
   const categorySet = new Set<string>(csvData.value.map((row) => row.stratification_category));
-  const categoryArray = Array.from(categorySet);
+  const categoryArray = Array.from(categorySet).sort();
   return categoryArray.filter((category) => category && category !== "All");
 });
 
