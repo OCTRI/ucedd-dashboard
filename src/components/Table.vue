@@ -25,6 +25,8 @@ const generateTable = () => {
 
   dataTable = new DataTable(table.value, {
     paging: false,
+    searching: false,
+    info: false,
     data: props.data,
     columns: [
       {
