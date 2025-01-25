@@ -45,6 +45,11 @@ tr.significant-nonidd-row td {
     background-color: var(--significant-nonidd-outcome) !important;
 }
 
+tr.all-stratification-row td {
+    border-top: 1px solid darkgrey;
+    font-weight: bold;
+}
+
 .significant-idd-block-text {
     padding-left: 1em;
     padding-right: 1em;

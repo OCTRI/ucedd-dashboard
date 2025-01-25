@@ -60,7 +60,8 @@ const generateTable = () => {
       bottomStart: null
     },
     rowCallback: function (row, data) {
-      if (!(row instanceof HTMLElement) || !('p_significant' in data) || !('outcome_directionality' in data)) {
+      if (!(row instanceof HTMLElement) || !('p_significant' in data) || !('outcome_directionality' in data)
+          || !('stratification' in data)) {
         return;
       }
 
@@ -70,6 +71,10 @@ const generateTable = () => {
         } else if (1 === data.outcome_directionality) {
           row.classList.add('significant-nonidd-row');
         }
+      }
+      
+      if ('All' === data.stratification) {
+        row.classList.add('all-stratification-row')
       }
     },
   });
