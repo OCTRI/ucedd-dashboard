@@ -60,11 +60,13 @@ const generateTable = () => {
       bottomStart: null
     },
     rowCallback: function (row, data) {
+      // Convinces typescript that the operations to follow are valid 
       if (!(row instanceof HTMLElement) || !('p_significant' in data) || !('outcome_directionality' in data)
           || !('stratification' in data)) {
         return;
       }
 
+      // Add style to rows where statistical significance is detected
       if (1 === data.p_significant) {
         if (0 === data.outcome_directionality) {
           row.classList.add('significant-idd-row');
@@ -73,6 +75,7 @@ const generateTable = () => {
         }
       }
       
+      // Add style to the "All" row (which aggregates counts at the bottom of table)
       if ('All' === data.stratification) {
         row.classList.add('all-stratification-row')
       }
@@ -102,17 +105,14 @@ watch(
 
 <template>
   <div>
-    <figure class="figure">
-      <div id="tableContainer">
-        <table class="table rounded-corners" ref="table">
-        </table>
-      </div>
-      <figcaption class="figure-caption">
-        Differences that are statistically significant are denoted with an asterisk (*). Rows that are colored <span
+    <p>Differences that are statistically significant are denoted with an asterisk (*). Rows that are colored <span
         class="significant-idd-block-text">orange</span> indicate poorer outcomes for the IDD community. Rows that are
-        colored <span class="significant-nonidd-block-text">blue</span> indicate poorer outcomes for the non-IDD
-        community.
-      </figcaption>
-    </figure>
+      colored <span class="significant-nonidd-block-text">blue</span> indicate poorer outcomes for the non-IDD
+      community.
+    </p>
+    <div id="tableContainer">
+      <table class="table rounded-corners" ref="table">
+      </table>
+    </div>
   </div>
 </template>
