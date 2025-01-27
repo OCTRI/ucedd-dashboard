@@ -105,14 +105,17 @@ watch(
 
 <template>
   <div>
-    <p>Differences that are statistically significant are denoted with an asterisk (*). Rows that are colored <span
+    <figure class="figure">
+      <div id="tableContainer">
+        <table class="table rounded-corners" ref="table">
+        </table>
+      </div>
+      <figcaption class="figure-caption">
+        Differences that are statistically significant are denoted with an asterisk (*). Rows that are colored <span
         class="significant-idd-block-text">orange</span> indicate poorer outcomes for the IDD community. Rows that are
-      colored <span class="significant-nonidd-block-text">blue</span> indicate poorer outcomes for the non-IDD
-      community.
-    </p>
-    <div id="tableContainer">
-      <table class="table rounded-corners" ref="table">
-      </table>
-    </div>
+        colored <span class="significant-nonidd-block-text">blue</span> indicate poorer outcomes for the non-IDD
+        community.
+      </figcaption>
+    </figure>
   </div>
 </template>
