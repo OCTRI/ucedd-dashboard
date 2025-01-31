@@ -14,6 +14,7 @@ const selectedMeasure = ref<string>("");
 const selectedCategory = ref<string>("");
 const measureRows = ref<Array<MeasureRow>>([]);
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+const allCategory = "All";
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
@@ -22,8 +23,14 @@ const measures = computed(() => {
 
 const categories = computed(() => {
   const categorySet = new Set<string>(csvData.value.map((row) => row.stratification_category));
-  const categoryArray = Array.from(categorySet).sort();
-  return categoryArray.filter((category) => category && category !== "All");
+  const categoryArray = Array.from(categorySet)
+    .filter(category => category)
+    .sort((a,b) => {
+      if (a === allCategory) return -1;
+      if (b === allCategory) return 1;
+      return a < b ? -1 : 1; 
+    });
+  return categoryArray;
 });
 
 const filteredData = computed(() => {
@@ -32,16 +39,14 @@ const filteredData = computed(() => {
       row.measure === selectedMeasure.value &&
       row.stratification_category === selectedCategory.value
   );
-  const allForMeasure = csvData.value.filter(
-    (row) =>
-      row.measure === selectedMeasure.value &&
-      row.stratification_category === "All"
-  );
-  const all = categoryData.concat(allForMeasure);
-  all.forEach((row, i) => {
+  categoryData.forEach((row, i) => {
     row.index = i;
   });
-  return all;
+  return categoryData;
+});
+
+const allCategorySelected = computed(() => {
+  return selectedCategory.value === allCategory;
 });
 
 const selectedMeasureRow = computed(() => {
@@ -49,15 +54,22 @@ const selectedMeasureRow = computed(() => {
   if (!row.length) {
     return {
       measure: selectedMeasure.value,
-      description: "",
+      definition: "",
+      chart_all: "",
       chart_age: "",
       chart_race_and_ethnicity: "",
       chart_residency: "",
       chart_sex: "",
+      description_all: "",
       description_age: "",
       description_race_and_ethnicity: "",
       description_residency: "",
       description_sex: "",
+      key_terms_all: "",
+      key_terms_age: "",
+      key_terms_race_and_ethnicity: "",
+      key_terms_residency: "",
+      key_terms_sex: "",
     }
   }
   return row[0];
@@ -160,10 +172,10 @@ onMounted(() => {
   </ul>
   <div class="tab-content" id="dashboardTabContent">
     <div class="tab-pane fade show active" id="chart-tab-pane" role="tabpanel" aria-labelledby="chart-tab">
-      <BarChart :data=filteredData :category=selectedCategory :description={...selectedMeasureRow} />
+      <BarChart :data=filteredData :category=selectedCategory :allCategorySelected=allCategorySelected :measureInfo={...selectedMeasureRow} />
     </div>
     <div class="tab-pane fade" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab">
-      <Description :category=selectedCategory :description={...selectedMeasureRow} />
+      <Description :category=selectedCategory :allCategorySelected=allCategorySelected :measureInfo={...selectedMeasureRow} />
     </div>
     <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab">
       <Table :data=filteredData />
