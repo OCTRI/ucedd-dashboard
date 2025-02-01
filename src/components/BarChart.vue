@@ -20,7 +20,11 @@ const props = defineProps({
         type: String,
         required: true
     },
-    description: {
+    allCategorySelected: {
+        type: Boolean,
+        required: true
+    },
+    measureInfo: {
         type: Object as PropType<MeasureRow>,
         required: true
     }
@@ -31,12 +35,12 @@ const isRate = computed(() => {
 });
 
 const title = computed(() => {
-    return props.data[0].measure + ' by ' + props.data[0].stratification_category;
+    return props.data[0].measure + (props.allCategorySelected ? '':' by ' + props.data[0].stratification_category);
 });
 
 const subtitle = computed(() => {
     const measuresColumnName = "chart_" + props.category.toLowerCase().replace(/[\s]+/g, '_');
-    const chartText = props.description[measuresColumnName as keyof MeasureRow];
+    const chartText = props.measureInfo[measuresColumnName as keyof MeasureRow];
     return chartText;
 });
 

@@ -74,11 +74,7 @@ const generateTable = () => {
           row.classList.add('significant-nonidd-row');
         }
       }
-      
-      // Add style to the "All" row (which aggregates counts at the bottom of table)
-      if ('All' === data.stratification) {
-        row.classList.add('all-stratification-row')
-      }
+
     },
   });
 };
