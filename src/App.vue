@@ -16,7 +16,7 @@ const selectedCategory = ref<string>("");
 const measureRows = ref<Array<MeasureRow>>([]);
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 const allCategory = "All";
-const { width, height } = useWindowSize()
+const { width } = useWindowSize()
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
