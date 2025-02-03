@@ -6,7 +6,10 @@ import path from 'path'
 export default defineConfig({
   base: '/ucedd-dashboard/',
   build: {
-    outDir: 'ucedd-dashboard'
+    outDir: 'ucedd-dashboard',
+    rollupOptions: {
+      input: 'index.html',
+    }
   },
   css: {
     preprocessorOptions: {
