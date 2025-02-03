@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
+import { useWindowSize } from '@vueuse/core';
 import BarChart from '@/components/BarChart.vue';
 import Description from '@/components/Description.vue';
 import Table from '@/components/Table.vue';
@@ -15,6 +16,7 @@ const selectedCategory = ref<string>("");
 const measureRows = ref<Array<MeasureRow>>([]);
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 const allCategory = "All";
+const { width } = useWindowSize()
 
 const measures = computed(() => {
   const measureSet = new Set<string>(csvData.value.map((row) => row.measure));
@@ -47,6 +49,12 @@ const filteredData = computed(() => {
 
 const allCategorySelected = computed(() => {
   return selectedCategory.value === allCategory;
+});
+
+const smallScreen = computed(() => {
+  // Derived through testing. Since this displays within an iFrame that may wrap on smaller screens, 
+  // using traditional breaks can yield unexpected results.
+  return width.value < 600;
 });
 
 const selectedMeasureRow = computed(() => {
@@ -166,18 +174,18 @@ onMounted(() => {
     <li class="nav-item" role="presentation">
       <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description-tab-pane" type="button" role="tab" aria-controls="description-tab-pane" aria-selected="false">Description</button>
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item" role="presentation" v-if="!smallScreen">
       <button class="nav-link" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false">Data</button>
     </li>
   </ul>
   <div class="tab-content" id="dashboardTabContent">
     <div class="tab-pane fade show active" id="chart-tab-pane" role="tabpanel" aria-labelledby="chart-tab">
-      <BarChart :data=filteredData :category=selectedCategory :allCategorySelected=allCategorySelected :measureInfo={...selectedMeasureRow} />
+      <BarChart :data=filteredData :category=selectedCategory :allCategorySelected=allCategorySelected :measureInfo={...selectedMeasureRow} :smallScreen=smallScreen />
     </div>
     <div class="tab-pane fade" id="description-tab-pane" role="tabpanel" aria-labelledby="description-tab">
       <Description :category=selectedCategory :allCategorySelected=allCategorySelected :measureInfo={...selectedMeasureRow} />
     </div>
-    <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab">
+    <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab" v-if="!smallScreen">
       <Table :data=filteredData />
     </div>
   </div>
