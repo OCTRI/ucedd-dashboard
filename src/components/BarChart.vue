@@ -11,6 +11,15 @@ const chartInstance = shallowRef<Chart | null>(null);
 Chart.defaults.font.size = 16;
 Chart.defaults.font.family = "'Lato', 'Helvetica', 'Arial', sans-serif";
 
+// Abbreviations for small screens
+const raceAbbreviations: Record<string, string> = {
+  "Black/African American": "BL",
+  "Latino/a/x": "LAT",
+  "Other/Multiple Races": "OTH",
+  "Unknown/Missing/Decline": "UNK",
+  "White": "WHI"
+}
+
 const props = defineProps({
     data: {
         type: Array<DisplayRow>,
@@ -26,6 +35,10 @@ const props = defineProps({
     },
     measureInfo: {
         type: Object as PropType<MeasureRow>,
+        required: true
+    },
+    smallScreen: {
+        type: Boolean,
         required: true
     }
 });
@@ -44,11 +57,22 @@ const subtitle = computed(() => {
     return chartText;
 });
 
+const useRaceAbbreviations = computed(() => {
+    return props.smallScreen && props.category === "Race and Ethnicity";
+});
+
+const categoryLabels = computed(() => {
+    if (useRaceAbbreviations.value) {
+        return props.data.map((row) => raceAbbreviations[row.stratification]);
+    }
+    return props.data.map((row) => row.stratification);
+});
+
 Chart.register(...registerables);
 
 const getChartData = () => {
     // Reformats the filtered data into the shape needed by chartjs
-    const labels = props.data.map((row) => row.stratification);
+    const labels = categoryLabels.value;
     const idd_data = props.data.map((row) => Number(row.idd_estimate_numeric));
     const non_idd_data = props.data.map((row) => Number(row.non_idd_estimate_numeric));
     return {
@@ -153,7 +177,17 @@ watch(() => props.data, (newData) => {
 </script>
 
 <template>
-    <div id="chart-wrapper">
-        <canvas ref="barChart"></canvas>
+    <div>
+        <div id="chart-wrapper">
+            <canvas ref="barChart"></canvas>
+        </div>
+        <div v-if="useRaceAbbreviations" class="text-secondary mt-3">
+            <h5>Race and Ethnicity Abbreviations</h5>
+            <ul>
+                <li v-for="(abbreviation, fullText) in raceAbbreviations" :key="fullText">
+                    {{ abbreviation }} = "{{ fullText }}"
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
