@@ -133,7 +133,7 @@ const initialize = (results: Papa.ParseResult<DataRow>) => {
     obj => ({
       ...obj,
       index: 0, // This will be set by filteredData
-      stratification_display: `${obj.stratification} ${(1 === obj.p_significant) ? '*' : ''}`,
+      stratification_display: `${obj.stratification} ${(1 === obj.p_significant) ? (0 === obj.outcome_directionality ? ' (*)': ' (†)') : ''}`,
     }))
   selectedMeasure.value = measures.value[0];
   selectedCategory.value = categories.value[0];

@@ -107,9 +107,9 @@ watch(
         </table>
       </div>
       <figcaption class="figure-caption">
-        Differences that are statistically significant are denoted with an asterisk (*). Rows that are colored <span
-        class="significant-idd-block-text">orange</span> indicate poorer outcomes for the IDD community. Rows that are
-        colored <span class="significant-nonidd-block-text">blue</span> indicate poorer outcomes for the non-IDD
+        Differences that are statistically significant are denoted with an asterisk (*) or a dagger (†) sign. Rows with a (*) are colored <span
+        class="significant-idd-block-text">orange</span> and indicate poorer outcomes for the IDD community. Rows with a (†) are
+        colored <span class="significant-nonidd-block-text">blue</span> and indicate better outcomes for the IDD
         community.
       </figcaption>
     </figure>
