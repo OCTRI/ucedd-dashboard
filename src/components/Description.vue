@@ -26,7 +26,7 @@ const measureDefinition = computed(() => {
 });
 
 const showMeasureDefinition = computed(() => {
-  return measureDefinition.value && props.allCategorySelected;
+  return measureDefinition.value;
 });
 
 const descriptionText = computed(() => {
