@@ -14,7 +14,6 @@ const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>("");
 const selectedCategory = ref<string>("");
 const measureRows = ref<Array<MeasureRow>>([]);
-const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 const allCategory = "All";
 const { width } = useWindowSize()
 
@@ -94,13 +93,7 @@ const fetchCSVData = async () => {
 };
 
 const fetchMeasureDescription = async () => {
-  let response;
-  // For development, the study team will edit this Google document
-  if (apiKey) {
-    response = await fetch("https://docs.google.com/spreadsheets/d/1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4/export?gid=0&format=csv&id=1_jFImMo4fZd8vQ7x4wAyLzxnnkn95F-vSXCV-yLzbi4&key=" + apiKey);
-  } else {
-    response = await fetch(pathPrefix() + "/measures.csv");
-  }
+  let response = await fetch(pathPrefix() + "/measures.csv");
   return await response.text();
 };
 
