@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { onMounted, useTemplateRef, watch } from 'vue';
 import DataTable, { Api } from 'datatables.net-bs5';
@@ -35,7 +36,7 @@ const generateTable = () => {
       },
       {
         data: 'stratification_display',
-        title: 'Stratification',
+        title: 'Stratification'
       },
       {
         data: 'total_n',
@@ -60,9 +61,13 @@ const generateTable = () => {
       bottomStart: null
     },
     rowCallback: function (row, data) {
-      // Convinces typescript that the operations to follow are valid 
-      if (!(row instanceof HTMLElement) || !('p_significant' in data) || !('outcome_directionality' in data)
-          || !('stratification' in data)) {
+      // Convinces typescript that the operations to follow are valid
+      if (
+        !(row instanceof HTMLElement) ||
+        !('p_significant' in data) ||
+        !('outcome_directionality' in data) ||
+        !('stratification' in data)
+      ) {
         return;
       }
 
@@ -74,14 +79,13 @@ const generateTable = () => {
           row.classList.add('significant-nonidd-row');
         }
       }
-
-    },
+    }
   });
 };
 
 const updateTable = () => {
   dataTable.clear();
-  props.data.forEach((row) => {
+  props.data.forEach(row => {
     dataTable.row.add(row);
   });
   dataTable.draw();
@@ -93,9 +97,9 @@ onMounted(() => {
 
 watch(
   () => props.data,
-  (() => {
+  () => {
     updateTable();
-  })
+  }
 );
 </script>
 
@@ -103,14 +107,15 @@ watch(
   <div>
     <figure class="figure">
       <div id="tableContainer">
-        <table class="table rounded-corners" ref="table">
-        </table>
+        <table class="table rounded-corners" ref="table"></table>
       </div>
       <figcaption class="figure-caption">
-        Differences that are statistically significant are denoted with an asterisk (*) or a dagger (†) sign. Rows with a (*) are colored <span
-        class="significant-idd-block-text">orange</span> and indicate poorer outcomes for the IDD community. Rows with a (†) are
-        colored <span class="significant-nonidd-block-text">blue</span> and indicate better outcomes for the IDD
-        community.
+        Differences that are statistically significant are denoted with an asterisk (*) or
+        a dagger (†) sign. Rows with a (*) are colored
+        <span class="significant-idd-block-text">orange</span> and indicate poorer
+        outcomes for the IDD community. Rows with a (†) are colored
+        <span class="significant-nonidd-block-text">blue</span> and indicate better
+        outcomes for the IDD community.
       </figcaption>
     </figure>
   </div>
