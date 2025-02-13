@@ -8,7 +8,7 @@ import Papa from 'papaparse';
 import Tab from 'bootstrap/js/dist/tab';
 import DataRow from '@/types/DataRow';
 import DisplayRow from '@/types/DisplayRow';
-import MeasureRow from '@/types/MeasureRow';
+import { MeasureRow } from '@/types/MeasureRow';
 
 const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>('');
@@ -64,6 +64,7 @@ const selectedMeasureRow = computed(() => {
   if (!row.length) {
     return {
       measure: selectedMeasure.value,
+      is_rate: '0',
       definition: '',
       chart_all: '',
       chart_age: '',

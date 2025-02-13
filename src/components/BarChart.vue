@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, shallowRef, PropType, ref, watch } from 'vue';
 import DisplayRow from '@/types/DisplayRow';
-import MeasureRow from '@/types/MeasureRow';
+import { MeasureRow, isRate} from '@/types/MeasureRow';
 import { Chart, Scale, TooltipItem, registerables } from 'chart.js';
 
 const barChart = ref<HTMLCanvasElement | null>(null);
@@ -41,8 +41,8 @@ const props = defineProps({
   }
 });
 
-const isRate = computed(() => {
-  return props.data.some(row => 1 === row.outcome_count);
+const explanatoryText = computed(() => {
+  return isRate(props.measureInfo) ? 'Shown as a number of people per 1000, counted over one year': 'Shown as a percent of people';
 });
 
 const title = computed(() => {
@@ -127,7 +127,7 @@ const getChartOptions = () => {
         beginAtZero: true,
         title: {
           display: true,
-          text: isRate.value ? 'Mean' : 'Percent'
+          text: isRate(props.measureInfo) ? 'Mean' : 'Percent'
         },
         afterBuildTicks(axis: Scale) {
           axis.ticks = [axis.ticks[0], axis.ticks[axis.ticks.length - 1]];
@@ -185,6 +185,9 @@ watch(
   <div>
     <div id="chart-wrapper">
       <canvas ref="barChart"></canvas>
+    </div>
+    <div>
+      <em>{{ explanatoryText }}</em>
     </div>
     <div v-if="useRaceAbbreviations" class="text-secondary mt-3">
       <h5>Race and Ethnicity Abbreviations</h5>

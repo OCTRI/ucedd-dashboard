@@ -1,5 +1,6 @@
-export default interface MeasureRow {
+interface MeasureRow {
   measure: string;
+  is_rate: string;
   definition: string;
   chart_all: string;
   chart_age: string;
@@ -17,3 +18,11 @@ export default interface MeasureRow {
   key_terms_residency: string;
   key_terms_sex: string;
 }
+
+function isRate(row: MeasureRow): boolean {
+  return Number(row.is_rate) === 1;
+}
+
+export { isRate };
+export type { MeasureRow };
+
