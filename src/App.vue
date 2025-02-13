@@ -14,7 +14,7 @@ const csvData = ref<Array<DisplayRow>>([]);
 const selectedMeasure = ref<string>('');
 const selectedCategory = ref<string>('');
 const measureRows = ref<Array<MeasureRow>>([]);
-const allCategory = "All";
+const allCategory = 'All';
 const { width } = useWindowSize();
 
 const measures = computed(() => {
@@ -96,7 +96,7 @@ const fetchCSVData = async () => {
 };
 
 const fetchMeasureDescription = async () => {
-  let response = await fetch(pathPrefix() + "/measures.csv");
+  const response = await fetch(pathPrefix() + '/measures.csv');
   return await response.text();
 };
 
