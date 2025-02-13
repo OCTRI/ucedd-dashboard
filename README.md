@@ -64,11 +64,18 @@ The measures.csv file provides information about each measure, including a summa
 |------|-------|
 |measure|The measure of interest (e.g., 30-Day All-Cause Readmissions)|
 |description|Definition of the measure for display on the Description page|
+|chart_all|A short key finding for the overall measure to display as a chart subtitle|
 |chart_age|A short key finding for the measure by age to display as a chart subtitle|
 |chart_race_and_ethnicity|A short key finding for the measure by race and ethnicity to display as a chart subtitle|
 |chart_residency|A short key finding for the measure by residency to display as a chart subtitle|
 |chart_sex|A short key finding for the measure by sex to display as a chart subtitle|
+|description_all|HTML text for the overall measure to summarize key findings|
 |description_age|HTML text for the measure by age to summarize key findings|
 |description_race_and_ethnicity|HTML text for the measure by race_and_ethnicity to summarize key findings|
 |description_residency|HTML text for the measure by residency to summarize key findings|
 |description_sex|HTML text for the measure by sex to summarize key findings|
+|key_terms_all|HTML text for the key terms related to the overall measure|
+|key_terms_age|HTML text for the key terms related to the measure by age|
+|key_terms_race_and_ethnicity|HTML text for the key terms related to the measure by race_and_ethnicity|
+|key_terms_residency|HTML text for the key terms related to the measure by residency|
+|key_terms_sex|HTML text for the key terms related to the measure by sex|
