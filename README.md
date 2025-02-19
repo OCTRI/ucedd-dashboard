@@ -2,6 +2,8 @@
 
 This Vue application displays the 2022 summary data for Medicaid members provided by CHSE. The source data provided by CHSE was transformed using an R-script available [here](https://source.ohsu.edu/OCTRI-Apps/ucedd-data-transformation/tree/main).
 
+This application is hosted as a Github Page: [https://octri.github.io/ucedd-dashboard/](https://octri.github.io/ucedd-dashboard/). See the Actions tab for the automated deployment configuration.
+
 ## Dependencies
 
 The application is built using [Vite](https://vite.dev/), which depends on [Node.js](https://nodejs.org/en).
