@@ -65,7 +65,8 @@ The measures.csv file provides information about each measure, including a summa
 |Column|Purpose|
 |------|-------|
 |measure|The measure of interest (e.g., 30-Day All-Cause Readmissions)|
-|description|Definition of the measure for display on the Description page|
+|is_rate|Whether the measure is reported as a rate (1) or as a percent (0)|
+|definition|Definition of the measure for display on the Description page|
 |chart_all|A short key finding for the overall measure to display as a chart subtitle|
 |chart_age|A short key finding for the measure by age to display as a chart subtitle|
 |chart_race_and_ethnicity|A short key finding for the measure by race and ethnicity to display as a chart subtitle|
